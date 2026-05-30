@@ -10,6 +10,13 @@
 > Group Genius on any research goal — architected and operated as a
 > **Triple-PhD MIT Genius** persona.
 
+<p align="center">
+  <a href="https://dlmastery.github.io/meta_innovation_harness/slideshow.html">
+    <img src="docs/assets/deck-preview.gif" alt="Meta-Innovation Harness — 100-slide pitch deck (animated preview)" width="100%">
+  </a>
+</p>
+<p align="center"><em>▶ Animated preview of the 100-slide deck — click it (or the link below) to open the full auto-playing slideshow.</em></p>
+
 ### 🔗 Quick links
 
 - 🌐 **Live site:** <https://dlmastery.github.io/meta_innovation_harness/>

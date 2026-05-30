@@ -4,3 +4,5 @@ node_modules/
 *.log
 state/secrets*
 .env
+.playwright-mcp/
+frame*.png
