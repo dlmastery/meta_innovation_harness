@@ -252,6 +252,8 @@ lens-specific contribution.
 |----------|-------------|
 | [documentation/README.md](documentation/README.md) | **Documentation hub** — start here; maps every doc in reading order |
 | [docs/ (GitHub Pages)](https://dlmastery.github.io/meta_innovation_harness/) | Full static site with visual architecture diagram |
+| [🎞️ Pitch deck — auto-slideshow (rendered)](https://dlmastery.github.io/meta_innovation_harness/slideshow.html) | 100-slide reveal.js deck, autoplay + loop (open via this github.io link to render) |
+| [Pitch deck — download .pptx](deck/Meta-Innovation-Harness-Pitch.pptx) | The 100-slide PowerPoint file |
 | [documentation/PRD.md](documentation/PRD.md) | Product Requirements Document |
 | [documentation/architecture.md](documentation/architecture.md) | Components, data flow, loop state machine, archival/lineage model |
 | [skills/README.md](skills/README.md) | The runnable skills: 6 workflows + meta + meta-meta, and how to pick one |
