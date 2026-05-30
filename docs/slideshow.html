@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meta-Innovation Harness — Pitch Deck (100 slides)</title>
+<meta name="description" content="Auto-advancing 100-slide pitch deck for the Meta-Innovation Harness: blanking + leaking cross-pollination, Group Genius, TSM-CI, six workflows, and the meta / meta-meta layers." />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css" id="theme" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" />
+<style>
+  :root{
+    --void:#080b10; --void2:#0d1117; --void3:#111820; --panel:#131b25; --panel2:#16202c;
+    --border:#1e2d3d; --border-hi:#2a4060;
+    --amber:#f5a623; --amber-dim:#c07f10; --cyan:#00d4ff; --cyan-dim:#0099bb;
+    --ice:#e8f4f8; --bone:#c8bfaa; --mist:#7a8fa0; --text:#d4dde6; --text-dim:#8899aa;
+    --success:#22c55e; --pink:#ff6b9d; --blue:#8b9cff;
+    --fd:'Syne',sans-serif; --fm:'IBM Plex Mono',monospace;
+  }
+  html,body{background:var(--void);}
+  .reveal{font-family:var(--fm);color:var(--text);font-size:30px;}
+  .reveal .slides{text-align:left;}
+  .reveal h1,.reveal h2,.reveal h3{font-family:var(--fd);color:var(--ice);font-weight:800;
+    text-transform:none;letter-spacing:-0.01em;line-height:1.04;margin:0 0 .3em;}
+  .reveal h1{font-size:1.9em;} .reveal h2{font-size:1.35em;} .reveal h3{font-size:1.0em;}
+  .reveal p,.reveal li{font-family:var(--fm);color:var(--text);line-height:1.45;}
+  .reveal a{color:var(--cyan);} .reveal strong{color:var(--ice);}
+  .reveal em{color:var(--amber);font-style:normal;}
+  .reveal section{padding:0;}
+
+  /* top hairline */
+  .reveal .slides section::before{content:'';position:absolute;top:-6px;left:-6px;right:-6px;height:5px;
+    background:linear-gradient(90deg,var(--amber) 0%,var(--amber) 55%,var(--cyan) 55%,var(--cyan) 100%);
+    opacity:.9;border-radius:2px;}
+
+  .eyebrow{font-family:var(--fm);font-size:.5em;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--cyan);margin-bottom:.35em;display:block;}
+  .lead{font-size:.62em;color:var(--text);line-height:1.5;max-width:24em;}
+  .muted{color:var(--text-dim);} .amber{color:var(--amber);} .cyan{color:var(--cyan);}
+  .ice{color:var(--ice);} .small{font-size:.5em;} .tiny{font-size:.42em;letter-spacing:.06em;}
+  .center{text-align:center;}
+
+  /* cards / grids */
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;
+    padding:.55em .7em;position:relative;overflow:hidden;}
+  .card.v2{background:var(--void2);} .card .acc{position:absolute;left:0;top:0;bottom:0;width:6px;}
+  .grid{display:grid;gap:.5em;margin-top:.3em;}
+  .g2{grid-template-columns:1fr 1fr;} .g3{grid-template-columns:1fr 1fr 1fr;}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  .col{display:grid;grid-template-columns:1fr 1fr;gap:.6em;align-items:start;}
+  .ttl{font-family:var(--fd);font-weight:700;color:var(--ice);font-size:.62em;}
+  .desc{font-size:.46em;color:var(--text);line-height:1.35;margin-top:.15em;}
+  .label{font-family:var(--fm);font-size:.4em;letter-spacing:.2em;text-transform:uppercase;}
+  ul.clean{list-style:none;margin:.2em 0;padding:0;}
+  ul.clean li{font-size:.55em;padding:.12em 0 .12em 1em;position:relative;line-height:1.4;}
+  ul.clean li::before{content:'▸';position:absolute;left:0;color:var(--amber);}
+  .bignum{font-family:var(--fd);font-weight:800;font-size:1.5em;line-height:1;}
+  .stat{font-family:var(--fd);font-weight:800;font-size:2.0em;line-height:1;color:var(--amber);}
+  .statlbl{font-family:var(--fm);font-size:.4em;letter-spacing:.15em;text-transform:uppercase;color:var(--text-dim);}
+  .pill{display:inline-block;font-size:.42em;letter-spacing:.12em;text-transform:uppercase;
+    border:1px solid var(--border-hi);border-radius:20px;padding:.25em .8em;color:var(--cyan);margin-bottom:.6em;}
+  .quote{font-family:var(--fd);font-weight:700;color:var(--amber);font-size:1.0em;line-height:1.15;}
+  .mono{font-family:var(--fm);}
+  pre.tree{background:var(--void2);border:1px solid var(--border);border-radius:8px;
+    padding:.6em .8em;font-size:.42em;line-height:1.5;color:var(--text);box-shadow:none;width:auto;}
+  pre.tree .d{color:var(--cyan);} pre.tree .f{color:var(--amber);}
+
+  /* divider slide */
+  .divider{position:relative;height:100%;}
+  .divider .actbig{position:absolute;right:-.1em;top:.0em;font-family:var(--fd);font-weight:800;
+    font-size:8em;color:var(--void3);line-height:1;z-index:0;}
+  .divider .inner{position:relative;z-index:1;border-top:3px solid var(--amber);
+    border-bottom:3px solid var(--cyan);padding:1em 0;margin-top:1.2em;}
+  .divider .act{font-family:var(--fm);letter-spacing:.3em;color:var(--cyan);font-size:.5em;text-transform:uppercase;}
+  .divider h1{font-size:2.1em;margin:.15em 0;}
+  .divider .sub{font-size:.55em;color:var(--text-dim);max-width:26em;margin-top:.5em;line-height:1.5;}
+
+  /* title slide */
+  .title h1{font-size:3.0em;line-height:.92;margin:.1em 0;}
+  .title .tag{font-family:var(--fd);font-weight:700;color:var(--text);font-size:.72em;margin-top:.3em;}
+  .title .strip{display:flex;gap:1.4em;margin-top:.7em;}
+  .title .strip .stat{font-size:1.4em;}
+
+  /* slide number / footer */
+  .reveal .slide-number{font-family:var(--fm);background:transparent;color:var(--amber);font-size:14px;right:18px;bottom:14px;}
+  .footer{position:fixed;left:20px;bottom:14px;font-family:var(--fm);font-size:11px;
+    letter-spacing:2px;color:var(--text-dim);z-index:30;}
+  .actfoot{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;font-family:var(--fm);
+    font-size:11px;letter-spacing:2px;color:var(--mist);z-index:30;}
+
+  /* progress accent */
+  .reveal .progress{color:var(--amber);height:4px;}
+  .reveal .controls{color:var(--cyan);}
+
+  /* autoplay toggle button */
+  #playbtn{position:fixed;top:14px;right:16px;z-index:40;font-family:var(--fm);font-size:12px;
+    letter-spacing:1px;background:var(--panel);color:var(--amber);border:1px solid var(--border-hi);
+    border-radius:20px;padding:.4em .9em;cursor:pointer;text-transform:uppercase;}
+  #playbtn:hover{border-color:var(--amber);color:var(--ice);}
+  .flow{display:flex;align-items:center;gap:.3em;flex-wrap:wrap;}
+  .flow .node{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:.35em .5em;
+    font-size:.42em;text-align:center;min-width:5.5em;} .flow .arr{color:var(--amber);font-size:.6em;}
+  .map{font-size:.5em;line-height:1.7;} .map b{color:var(--amber);font-family:var(--fd);}
+  .map .ar{color:var(--text);}
+</style>
+</head>
+<body>
+<button id="playbtn" aria-label="Toggle autoplay">⏸ Auto</button>
+<div class="footer">META-INNOVATION HARNESS</div>
+<div class="actfoot" id="actfoot"></div>
+
+<div class="reveal"><div class="slides" id="slides"></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+/* ----- color tokens for JS ----- */
+const K={amber:'var(--amber)',cyan:'var(--cyan)',ice:'var(--ice)',blue:'var(--blue)',pink:'var(--pink)',
+  success:'var(--success)',text:'var(--text)',red:'#ff6b6b'};
+const EX={claude:K.amber,chatgpt:K.cyan,gemini:K.blue,grok:K.pink};
+
+/* helper builders -> HTML strings */
+const card=(acc,inner,cls='')=>`<div class="card ${cls}"><span class="acc" style="background:${acc}"></span>${inner}</div>`;
+const eb=t=>`<span class="eyebrow">${t}</span>`;
+function slide(act,html,opts={}){
+  return `<section data-act="${act}" ${opts.bg?`data-background-color="${opts.bg}"`:''}>${html}</section>`;
+}
+function content(eyebrow,title,body,opts={}){
+  return slide(opts.act||'', `${eb(eyebrow)}<h2 style="${opts.ts?`font-size:${opts.ts}`:''}">${title}</h2>${body}`, opts);
+}
+function divider(act,title,sub){
+  return slide(act, `<div class="divider"><div class="actbig">${act.replace('ACT ','')}</div>
+    <div class="inner"><div class="act">${act}</div><h1>${title}</h1><div class="sub">${sub}</div></div></div>`);
+}
+
+/* ============ SLIDE DATA (mirrors the 100-slide PPTX) ============ */
+const S=[];
+
+/* --- Act 0 --- */
+S.push(slide('TITLE',`<div class="title">
+  <span class="eyebrow">v1.0 · MIT License · dlmastery · Claude Code Skill Suite</span>
+  <h1>Meta-Innovation<br><em>Harness</em></h1>
+  <div class="tag">Four frontier AIs.  Six innovation workflows.  One orchestrating mind.</div>
+  <p class="lead" style="margin-top:.5em">A novel <strong>blanking + leaking cross-pollination</strong> method that engineers Group Genius on any research goal.</p>
+  <div class="strip">
+    <div><div class="stat">4</div><div class="statlbl">Frontier AIs</div></div>
+    <div><div class="stat" style="color:${K.cyan}">6</div><div class="statlbl">Workflows</div></div>
+    <div><div class="stat">8</div><div class="statlbl">Skills</div></div>
+    <div><div class="stat" style="color:${K.cyan}">∞</div><div class="statlbl">Research goals</div></div>
+  </div></div>`));
+
+S.push(content('Operating Stance · P0','The Persona',
+  `<div class="col"><div>${card(K.amber,`<div class="quote">“Triple-PhD MIT Genius — Elite of the Elite Researcher, Best of the Best on Planet Earth.”</div>
+   <p class="small" style="margin-top:.5em">Drawing wisdom from ALL fields known to mankind — fusing them into breakthroughs no single-discipline mind could reach.</p>
+   <div class="label cyan" style="margin-top:.5em">Not vanity — an epistemic contract</div>
+   <ul class="clean"><li>Sets the quality floor for every prompt</li><li>Widens disciplinary reference</li><li>Courage for genuinely radical ideas</li><li>Ruthless self-critique</li></ul>`,'v2')}</div>
+   <div>${card(K.cyan,`<div class="label amber">Applies to</div>
+   <ul class="clean"><li class="ice"><strong>The Orchestrator (Claude Code)</strong></li><li>Claude · expert</li><li>ChatGPT · expert</li><li>Gemini · expert</li><li>Grok · expert</li></ul>
+   <p class="tiny muted" style="margin-top:.4em">Stated verbatim atop every expert invocation.</p>`)}</div></div>`,
+  {act:'ACT 0 · TITLE'}));
+
+S.push(content('The One-Line Thesis','Breakthroughs live at the intersections.',
+  `<p class="lead" style="max-width:40em;font-size:.58em">Real breakthroughs emerge at disciplinary intersections. No single LLM — however capable — can simultaneously hold a biologist's intuition, a physicist's rigor, a social scientist's measurement discipline, and a world-modeler's constraint-stripping creativity.</p>
+   ${card(K.cyan,`<div class="quote" style="font-size:.9em">The TSM-CI and Group Genius literature prove structured cross-pollination among diverse experts outperforms any individual. This harness encodes that proof as an algorithm.</div>`,'v2')}`,
+  {act:'ACT 0 · TITLE',ts:'1.15em'}));
+
+/* --- Act I --- */
+const A1='ACT I · THE PROBLEM';
+S.push(divider('ACT I','The Problem','Why single-LLM and single-genius research stalls — and the six coupled frontier questions the field cannot yet answer.'));
+S.push(content('First Premise','The lone-genius myth is false.',
+  `<div class="quote" style="font-size:1.0em">“Creativity is almost always emergent from interaction.”</div>
+   <p class="lead" style="font-size:.55em;margin-top:.4em">Keith Sawyer studied jazz ensembles, improv theater, and innovation labs. Breakthroughs come from a series of sparks — never a single flash.</p>
+   ${card(K.cyan,`<p class="small ice">If genius is interactional, the way to amplify it is to engineer the interaction — not to wait for a bigger lone mind.</p>`,'v2')}`,{act:A1}));
+S.push(content('The Single-Model Ceiling','One model averages.',
+  `<p class="lead" style="max-width:42em;font-size:.55em">Each frontier model carries training biases, stylistic priors, and epistemic defaults that constrain the solution space. Not bugs — irreducible features.</p>
+   <div class="grid g4">${[['Claude','philosophical nuance · biological analogy',EX.claude],['GPT','quantitative mechanism · engineering',EX.chatgpt],['Gemini','empirical validation · social context',EX.gemini],['Grok','contrarianism · constraint-stripping',EX.grok]].map(t=>card(t[2],`<div class="ttl" style="color:${t[2]}">${t[0]}</div><div class="desc">${t[1]}</div>`)).join('')}</div>
+   <p class="small amber" style="margin-top:.4em">The insight: EXPLOIT these differences rather than eliminate them.</p>`,{act:A1}));
+S.push(content('The Anchoring Trap','Iterating on your own answer shrinks the search.',
+  `<div class="col"><div><p class="small">Tversky &amp; Kahneman (1974): first impressions dominate later reasoning — even when told the initial value is random.</p>
+   ${[5.2,4.2,3.2,2.2].map((w,i)=>`<div class="card" style="width:${w}em;margin:.2em 0;padding:.25em .5em"><span class="small" style="color:${i===3?K.mist:K.text}">Round ${i+1} — alternatives ▾</span></div>`).join('')}</div>
+   <div>${card(K.amber,`<p class="small ice">Ask one model to iterate on its own prior answer and it anchors heavily — the space of alternatives collapses round by round.</p>`,'v2')}</div></div>`,{act:A1,ts:'1.05em'}));
+S.push(content('Structural, Not Fixable','No single mind suffices for frontier research.',
+  `<p class="lead" style="max-width:42em;font-size:.56em">Deep expertise in one domain comes at the cost of breadth across others. A structural feature of how knowledge is organised — not a deficiency a bigger model removes.</p>
+   <div class="grid g2">${['Quantum decoherence from first principles','How biases emerge from social structure','How evolution optimises under constraint','Imagining radically alternative physics'].map(t=>card(K.cyan,`<span class="small">${t}</span>`)).join('')}</div>
+   <p class="tiny amber" style="margin-top:.3em">…rarely live inside one head. Or one model.</p>`,{act:A1,ts:'1.05em'}));
+S.push(content('The Source Material','The DeepMind / Gemini talk.',
+  `<p class="small">A sit-down with four leaders on Gemini's origin, unified models, distillation, evaluation, and the 2027 research horizon.</p>
+   <div class="grid g2">${[['Jeff Dean','Computing infrastructure & scale'],['Koray Kavukcuoglu','Research direction & architecture'],['Noam Shazeer','Architecture · Transformer co-inventor'],['Oriol Vinyals','Agents & multimodal systems']].map(t=>card(K.cyan,`<div class="ttl">${t[0]}</div><div class="desc">${t[1]}</div>`)).join('')}</div>
+   <p class="tiny amber" style="margin-top:.3em">Long shared history was named the secret ingredient — analogous to transactive memory.</p>`,{act:A1}));
+S.push(content('Where the Frontier Is','Solved engineering vs. the live agenda.',
+  `<div class="col"><div>${card(K.success,`<div class="label" style="color:${K.success}">Framed as solved</div><ul class="clean"><li>Unification — the “twins” merger</li><li>Distillation — Flash beats prior Pro</li><li>Product feedback loops</li><li>Long-term team trust (TMS)</li></ul>`,'v2')}</div>
+   <div>${card(K.amber,`<div class="label amber">Framed as open · 2027 agenda</div><ul class="clean"><li>Self-improvement loops</li><li>Long-horizon agency</li><li>Proper evaluation</li><li>Human-like efficiency</li><li>Deep world modeling</li><li>One-model → many-products</li></ul>`,'v2')}</div></div>`,{act:A1,ts:'1.05em'}));
+S.push(content('The Open Agenda','Six frontier questions.',
+  `<div class="grid g3">${[['Q1','Self-learning / organic continuous learning',EX.claude],['Q2','Reliable long-duration autonomous agents',EX.chatgpt],['Q3','Evaluation beyond benchmarks',EX.gemini],['Q4','Closing the human-AI efficiency gap',EX.grok],['Q5','World modeling / physical dynamics (Omni)',K.cyan],['Q6','One model → thousands of products',K.amber]].map(q=>card(q[2],`<div class="bignum" style="color:${q[2]};font-size:1.1em">${q[0]}</div><div class="desc" style="font-size:.5em">${q[1]}</div>`)).join('')}</div>
+   <p class="tiny amber" style="margin-top:.3em">Foundational, coupled open challenges betting the 2027 trajectory.</p>`,{act:A1}));
+
+const qData=[
+ ['Q1','Self-learning / organic continuous learning.','“We haven\'t achieved a truly organic or continuously learning architecture yet.” The vision: models that use their own agentic capabilities as research assistants — proposing improvements, running experiments on themselves, helping design their successor.','The big 2027 leap — unlocking vast remaining capacity without simply adding scale.',EX.claude],
+ ['Q2','Reliable long-duration autonomous agents.','Directly named an ongoing challenge. They want agentic persistence — agents coherent and useful over days, not minutes. Tied to infrastructure; essential before agents can contribute to self-research.','The reliability gap currently blocks the self-learning vision from being realized.',EX.chatgpt],
+ ['Q3','Evaluation beyond benchmarks.','Repeatedly emphasized as a critical hurdle. Internal benchmarks no longer suffice; the ultimate test must be real-world user feedback and product usage.','Turn messy, high-dimensional, live signal into a rigorous, scalable evaluation system.',EX.gemini],
+ ['Q4','Closing the human-AI efficiency gap.','Humans learn with far less data and compute. Algorithmic breakthroughs in sample efficiency — and more “organic” architectures — may beat raw scaling.','One of the clearest paths to unlocking more intelligence from today\'s hardware.',EX.grok],
+ ['Q5','World modeling / physical dynamics.','The shift from text/image/video to models that natively understand physics, causality, and “moving atoms” — the Gemini Omni direction.','Necessary for agents that act reliably in the physical or long-horizon digital world.',K.cyan],
+];
+qData.forEach(q=>S.push(content('Frontier Question · '+q[0],q[1],
+  `<div class="col"><div>${card(q[4],`<p class="small">${q[2]}</p>`,'v2')}</div>
+   <div>${card(q[4],`<div class="label" style="color:${q[4]}">Why it matters</div><p class="small ice" style="margin-top:.3em">${q[3]}</p>`)}</div></div>`,{act:A1,ts:'1.0em'})));
+S.push(content('Frontier Question · Q6','One model → thousands of products.',
+  `${card(K.amber,`<p class="small">Consensus on “one model — countless specialized outlets,” raising how to design interfaces, distillation/specialization layers, and interaction paradigms so the single model feels excellent everywhere — without fragmentation creeping back in.</p>`,'v2')}
+   ${card(K.cyan,`<div class="label cyan">Why the six are coupled</div><p class="small ice" style="margin-top:.2em">Self-learning needs reliable agents (Q1↔Q2); both need new evaluation (Q3); efficiency reshapes all three (Q4); world models ground agency (Q5); productization is how it ships (Q6). Answering one gives context for the others — the interdependence the harness exploits.</p>`)}`,
+  {act:A1,ts:'1.0em'}));
+
+/* --- Act II --- */
+const A2='ACT II · THE INSIGHT';
+S.push(divider('ACT II','The Insight','Group Genius, Group Flow, and the Transactive Systems Model of Collective Intelligence — the science of why diverse teams out-think any individual.'));
+S.push(content('Keith Sawyer · 2007','Group Genius.',
+  `<p class="lead" style="max-width:40em;font-size:.6em">The highest-quality creative work — in science, art, and innovation — emerges from structured improvisation between diverse experts genuinely building on one another.</p>
+   ${card(K.amber,`<div class="quote">Genius is not individual. It is interactional.</div>`,'v2')}
+   <p class="tiny muted" style="margin-top:.4em">The harness encodes this as a protocol: fixed lenses, blanking discipline, rotation rules — forcing genuine cross-pollination, not polite sequential monologue.</p>`,{act:A2}));
+S.push(content('The Peak Collective State','Group Flow.',
+  `<p class="small">When a team feels “in sync,” time distorts and ideas flow improvisationally. Sawyer's ten conditions include:</p>
+   <div class="grid g4">${['Clear but open goals','Autonomy','Potential for failure','Spontaneous communication','Close listening','Equal participation','Blending of egos','Familiarity & trust'].map(c=>`<div class="card" style="font-size:.5em"><span class="ice">${c}</span></div>`).join('')}</div>
+   <p class="tiny amber" style="margin-top:.3em">Each workflow re-creates a different subset of these conditions on purpose.</p>`,{act:A2}));
+S.push(content('Literature-Backed','Four deep mechanisms.',
+  `<div class="grid g2">${[['01','Idea sparks + recombination','“Yes-and.” Bell Labs met “almost on the spur of the moment” daily.',EX.claude],['02','Attention & focus dynamics','Concentration + close listening + equal participation = shared joint attention.',EX.chatgpt],['03','Added context / cross-pollination','Each genius reframes the problem — exactly how blanking+leaking works.',EX.gemini],['04','Familiarity + trust + risk','Long shared history supplies tacit knowledge — sync without groupthink.',EX.grok]].map(t=>card(t[3],`<div class="flow"><span class="bignum" style="color:${t[3]};font-size:.9em">${t[0]}</span><span class="ttl">${t[1]}</span></div><div class="desc">${t[2]}</div>`)).join('')}</div>`,{act:A2}));
+S.push(content('Woolley · Gupta et al.','TSM-CI — the modern framework.',
+  `<p class="small" style="max-width:42em">The Transactive Systems Model of Collective Intelligence — the most precise modern account of group IQ, tested on 476 open-source teams. Three interlocking transactive systems.</p>
+   <div class="grid g3">${[['TMS','Transactive Memory','who knows what',EX.claude],['TAS','Transactive Attention','where focus goes',K.cyan],['TRS','Transactive Reasoning','joint sense-making',K.amber]].map(t=>card(t[3],`<div class="bignum" style="color:${t[3]}">${t[0]}</div><div class="ttl">${t[1]}</div><div class="desc"><em>${t[2]}</em></div>`,'v2')).join('')}</div>`,{act:A2,ts:'1.05em'}));
+const tsData=[['TMS','Transactive Memory.','Everyone knows “who knows what.” The DeepMind team\'s long shared history was a perfect TMS.','LEAKING builds it — every AI sees the evolving group knowledge across all other questions.',EX.claude],
+ ['TAS','Transactive Attention.','The group collectively directs and sustains focus on the most promising threads.','RANDOM BLANKING forces re-allocation — the AI must re-engage the focal question entirely fresh.',K.cyan],
+ ['TRS','Transactive Reasoning.','Joint sense-making and error-correction, where one idea is immediately reframed by others.','The CLEAN-SLATE RE-ASK + polymath prompt enforces fresh reasoning informed by the collective.',K.amber]];
+tsData.forEach(t=>S.push(content('Transactive System · '+t[0],t[1],
+  `<div class="col"><div>${card(t[4],`<div class="label" style="color:${t[4]}">In human groups</div><p class="small" style="margin-top:.2em">${t[2]}</p>`,'v2')}</div>
+   <div>${card(K.amber,`<div class="label amber">In the AI protocol</div><p class="small ice" style="margin-top:.2em">${t[3]}</p>`,'v2')}</div></div>`,{act:A2,ts:'1.05em'})));
+S.push(content('The Magic Was a System','The DeepMind team WAS a transactive system.',
+  `<p class="lead" style="max-width:42em;font-size:.58em">Their “finish-each-other's-sentences” dynamic, born of years of shared history, is precisely transactive memory. The breakthrough engine was never four lone geniuses — it was the system between them.</p>
+   ${card(K.cyan,`<div class="quote" style="font-size:.85em">In high-uncertainty environments — exactly like the Gemini frontier questions — strong TAS + TRS buffer overload and sustain commitment far better than raw expertise alone.</div>`,'v2')}`,{act:A2,ts:'1.0em'}));
+S.push(content('Where Group Genius Shipped','Precedents.',
+  `<div class="grid g3">${[['Bell Labs','Shockley\'s team met spur-of-the-moment, daily'],['Xerox PARC','informal collisions over formal process'],['MIT Building 20','radical adjacency, mixed disciplines'],['Pixar Braintrust','candid peer critique loops'],['IDEO · d.school','Ideaflow & daily idea quotas'],['DeepMind merger','consolidating trust into one engine']].map((t,i)=>card(i%2?K.cyan:K.amber,`<div class="ttl">${t[0]}</div><div class="desc">${t[1]}</div>`)).join('')}</div>
+   <p class="tiny amber" style="margin-top:.3em">Formal meetings kill it; spontaneous collisions create it.</p>`,{act:A2}));
+
+/* --- Act III --- */
+const A3='ACT III · THE INVENTION';
+S.push(divider('ACT III','The Core Invention','Blanking + Leaking cross-pollination — a dialectical engine with forced amnesia on the focal question.'));
+S.push(content('In One Sentence','Blanking + Leaking.',
+  `${card(K.amber,`<div class="quote">A dialectical cross-pollination engine with forced amnesia on the focal question.</div>`,'v2')}
+   <div class="col">${card(K.amber,`<div class="ttl amber" style="font-size:.9em">BLANK</div><p class="small">Delete the focal question's own prior answers — clean slate.</p>`)}
+   ${card(K.cyan,`<div class="ttl cyan" style="font-size:.9em">LEAK</div><p class="small">Show the current-best answers of every OTHER question.</p>`)}</div>`,{act:A3}));
+S.push(content('Mechanic · 1 of 2','BLANK — forced amnesia.',
+  `<p class="small">For focal question Qᵢ, completely delete each expert's prior answer to Qᵢ before the next round. The expert literally cannot anchor to what no longer exists in the context window.</p>
+   ${card(K.amber,`<p class="mono small" style="color:var(--bone)">[CONTEXT — DO NOT USE] Your previous answer to Q3 was: “…”<br>Set it aside entirely. Begin from first principles as if you had never answered Q3.</p>`,'v2')}
+   <p class="tiny amber" style="margin-top:.3em">EFFECT · eliminates anchoring · forces first-principles re-derivation · prevents self-echo-chamber</p>`,{act:A3}));
+S.push(content('Mechanic · 2 of 2','LEAK — cross-domain signal.',
+  `<p class="small">While the focal answer is blanked, inject the current-best answers of all OTHER questions — preserving cross-domain signal without contaminating the focal thread.</p>
+   <div class="col"><div>${card(K.cyan,`<div class="label cyan">Cross-domain seeding</div><p class="small" style="margin-top:.2em">A biologist re-deriving a physics question — after reading the physics lens on biology — generates combinations invisible in isolation.</p>`,'v2')}</div>
+   <div>${card(K.amber,`<div class="label amber">Productive constraint</div><p class="small ice" style="margin-top:.2em">Leaked answers set a quality floor (beat them) and — via the fixed lens — a diversity ceiling (bring something different).</p>`,'v2')}</div></div>`,{act:A3}));
+S.push(content('The Crucial Distinction','This is NOT self-priming.',
+  `<div class="col"><div>${card(K.red,`<div class="label" style="color:${K.red}">Naive iteration</div><p class="small">Show the model its own prior answer and ask it to “improve.” It paraphrases, defends, anchors. Each output copies the last.</p>`,'v2')}</div>
+   <div>${card(K.success,`<div class="label" style="color:${K.success}">Blanking + Leaking</div><p class="small ice">Every output for Q1 is born fresh — never copied from a prior version of itself. Weak ideas get out-competed across random neighborhoods.</p>`,'v2')}</div></div>
+   <p class="quote center" style="font-size:.8em;margin-top:.3em">Simulated collaborative refinement under controlled information asymmetry.</p>`,{act:A3}));
+S.push(content('Loop Structure · Inner','The inner loop.',
+  `<p class="small">Rotate the blank+leak protocol across all focal questions in one pass. 1–3 blanked per loop, rotated randomly; all four experts respond to each focal question.</p>
+   <div class="grid g3">${['Select focal Q (randomised)','Blank its prior answers','Leak siblings\' current-best','4 experts re-derive fresh','Distill → new Current Best','Rotate to next question'].map((t,i)=>card(K.cyan,`<div class="flow"><span class="bignum cyan" style="font-size:.8em">${i+1}</span><span class="small">${t}</span></div>`)).join('')}</div>`,{act:A3}));
+S.push(content('Loop Structure · Outer','The outer loop.',
+  `<p class="small">After a full inner pass, the Orchestrator synthesises, scores, updates each Current Best, and re-broadcasts — Delphi-style multi-round elicitation that compounds quality.</p>
+   ${[['Quality delta','Did each Current Best improve materially?'],['Diminishing returns','Is marginal gain per pass below threshold?'],['Convergence','Robust consensus — or productive divergence?'],['Time budget','Has the session budget been consumed?']].map(t=>`<div class="card" style="padding:.3em .6em;margin:.18em 0"><span class="ttl amber" style="font-size:.6em">${t[0]}</span> &nbsp;<span class="small">${t[1]}</span></div>`).join('')}
+   <p class="tiny cyan" style="margin-top:.2em">Above threshold + time remains → next pass. Converged or time out → final synthesis.</p>`,{act:A3}));
+S.push(content('The Engine, Drawn','User → Orchestrator → Experts → Archive.',
+  `<div class="flow" style="margin-top:.3em">
+     <div class="node" style="border-color:${K.cyan}">USER<br><span class="muted">research goal</span></div><span class="arr">→</span>
+     <div class="node" style="border-color:${K.amber}">ORCHESTRATOR<br><span class="muted">persona · selector</span></div><span class="arr">→</span>
+     <div class="node" style="border-color:${K.cyan}">CLAUDE-IN-CHROME<br><span class="muted">browser transport</span></div><span class="arr">→</span>
+     <div class="node" style="border-color:${K.pink}">4 EXPERTS<br><span class="muted">fixed-lens tabs</span></div></div>
+   ${card(K.amber,`<p class="small amber center">BLANK focal · LEAK siblings · re-derive from first principles · rotate &nbsp;[inner loop]</p>`,'v2')}
+   <div class="flow"><div class="node" style="border-color:${K.cyan};min-width:11em">DISTILLATION → SYNTHESIS · select Current Best [outer loop]</div><span class="arr">→</span>
+     <div class="node" style="border-color:${K.success};min-width:9em">examples/ ARCHIVE · full Markdown + lineage</div></div>`,{act:A3,ts:'1.0em'}));
+S.push(content('Not New to Science','Elite research already works this way.',
+  `<div class="grid g2">${[['Theoretical physics','Solve easy equations, hold fixed, re-solve the hard one; rotate.'],['Hegelian dialectic','Thesis, then clean-slate antithesis informed by adjacent domains.'],['Theory-club sessions','Re-explain A from scratch in light of what you heard on B–F.'],['Grant-revision cycles','Rewrite only the attacked section with improved others in context.'],['The blank-page test','Delete Chapter 3; read polished 1–2 & 4–6; rewrite 3.'],['Delphi method','Anonymous iterative rounds with aggregated prior responses.']].map((t,i)=>card(i%2?K.cyan:K.amber,`<div class="ttl" style="font-size:.55em">${t[0]}</div><div class="desc">${t[1]}</div>`)).join('')}</div>`,{act:A3}));
+S.push(content('The Payoff','Why it produces novelty.',
+  `${card(K.amber,`<div class="quote">Structured productive interference.</div><p class="small ice" style="margin-top:.2em">Ideas no individual could generate alone become possible through structured cross-pollination of diverse lenses.</p>`,'v2')}
+   <ul class="clean"><li>Biology lens re-derives Q3 after reading the physics lens on Q1 & Q4 — a physical-substrate concept transfers across.</li><li>Social-science lens re-derives Q2 after Grok's constraint-stripping of Q5 & Q6 — freed from an implicit assumption.</li><li>Random neighborhoods + multiple regenerations dilute weak ideas and amplify fertile ones.</li></ul>`,{act:A3}));
+
+/* --- Act IV --- */
+const A4='ACT IV · THE CAST';
+S.push(divider('ACT IV','The Cast','Four browser-driven super-experts, each in a fixed disciplinary lens, conducted by one Orchestrator over the Claude-in-Chrome transport.'));
+S.push(content('Fixed-Lens Ensemble','Four minds, four lenses.',
+  `<p class="small">Each frontier LLM receives a permanent, non-negotiable disciplinary lens. The tension between lenses is the engine of novelty.</p>
+   <div class="grid g4">${[['🧬','Claude','Biological Philosopher',EX.claude],['⚛','ChatGPT','Physical Engineer',EX.chatgpt],['📊','Gemini','Human-System Evaluator',EX.gemini],['🌀','Grok','Radical World-Modeler',EX.grok]].map(t=>card(t[3],`<div class="center" style="font-size:1.4em">${t[0]}</div><div class="ttl center" style="color:${t[3]}">${t[1]}</div><div class="desc center">${t[2]}</div>`)).join('')}</div>`,{act:A4}));
+const expData=[
+ ['🧬','Claude','Anthropic','Biological Philosopher',['Evolutionary & systems biology','Ancient texts — Vedas/Stoic/Taoist/Greek','Continental philosophy & ethics','Pattern languages of living systems'],'Finds the living-system analogy. Looks for what evolution has already solved. Brings philosophical nuance to mechanistic questions.',EX.claude],
+ ['⚛','ChatGPT','OpenAI','Physical Engineer',['Theoretical & applied physics','Chemistry & materials science','Systems engineering & mechanism','Quantitative first-principles modeling'],'Demands quantitative mechanism and engineering concreteness. Converts intuition into buildable, testable structure.',EX.chatgpt],
+ ['📊','Gemini','Google DeepMind','Human-System Evaluator',['Social science & behavioral economics','Product strategy & market dynamics','HCI & UX research','Evaluation methodology & measurement'],'Grounds ideas in real users and measurement. Asks how it would be evaluated, adopted, and felt in context.',EX.gemini],
+ ['🌀','Grok','xAI','Radical World-Modeler',['Creative world-modeling & scenario design','Radical efficiency & constraint-stripping','Contrarian hypothesis generation','Sci-fi as method'],'Strips constraints and models radical alternatives. The contrarian that frees the panel from shared assumptions.',EX.grok]];
+expData.forEach(e=>S.push(content('Expert · '+e[2],`${e[1]} — ${e[3]}.`,
+  `<div class="col"><div>${card(e[6],`<div class="flow"><span style="font-size:1.4em">${e[0]}</span><span class="ttl" style="color:${e[6]}">${e[1]}</span></div><div class="label" style="color:${e[6]};margin-top:.3em">Fixed lens</div><ul class="clean">${e[4].map(l=>`<li>${l}</li>`).join('')}</ul>`,'v2')}</div>
+   <div>${card(K.amber,`<div class="label amber">Epistemic style</div><p class="small ice" style="margin-top:.2em">${e[5]}</p>`)}</div></div>`,{act:A4,ts:'1.0em'})));
+S.push(content('The Conductor','The Orchestrator — Claude Code.',
+  `<p class="small">Claude Code, under the Triple-PhD MIT Genius persona, conducts the ensemble end to end.</p>
+   <div class="grid g3">${[['Decompose','parse the goal into coupled sub-questions'],['Select','diagnose & pick the optimal workflow'],['Brief','deliver lens-specific prompts to each expert'],['Run','drive the inner/outer loop state machine'],['Synthesise','integrate, score, choose Current Best'],['Archive','write full transcripts + lineage to disk']].map(t=>card(K.amber,`<div class="ttl amber" style="font-size:.6em">${t[0]}</div><div class="desc">${t[1]}</div>`)).join('')}</div>`,{act:A4,ts:'1.0em'}));
+S.push(content('Design Decision','Why fixed expert slots?',
+  `<ul class="clean"><li>Permanent roles build implicit session memory — a consistent voice and lens that deepens cross-pollination.</li><li>Role permanence is the foundation of the TMS: each expert becomes the acknowledged owner of its domain.</li><li>Rotating roles would yield generic polymath responses, indistinguishable from one another.</li></ul>
+   ${card(K.cyan,`<p class="small ice">EXCEPTION · the W3 Organizer role rotates Claude → ChatGPT → Gemini → Grok, because it is a process role (redundancy filter, bridge questions) benefiting from fresh perspectives.</p>`,'v2')}`,{act:A4}));
+S.push(content('The Transport','Claude-in-Chrome.',
+  `<p class="small">Drives four real browser tabs at their highest reasoning modes — no APIs, no lock-in, total visibility.</p>
+   <div class="grid g4">${[['Claude','Opus 4.8 · High',EX.claude],['ChatGPT','Pro',EX.chatgpt],['Gemini','3.1 Pro · Extended',EX.gemini],['Grok','Expert',EX.grok]].map(t=>card(t[2],`<div class="ttl">${t[0]}</div><div class="desc" style="color:${t[2]}">${t[1]}</div>`)).join('')}</div>
+   <div class="grid g3" style="margin-top:.3em">${[['Highest modes','Top reasoning modes are browser-only or stronger.'],['Model-agnostic','UI changes absorbed via config — no code changes.'],['Transparent','Every interaction visible, reviewable in real time.']].map(t=>card(K.cyan,`<div class="ttl cyan" style="font-size:.55em">${t[0]}</div><div class="desc">${t[1]}</div>`)).join('')}</div>`,{act:A4}));
+
+/* --- Act V --- */
+const A5='ACT V · THE WORKFLOWS';
+S.push(divider('ACT V','The Six Workflows','Six Innovation Harnesses — a designed portfolio of cognitive-pressure profiles over one shared blank+leak engine.'));
+S.push(content('Eight Skills Total','The Innovation Harness suite.',
+  `${[['W1','Cross-Pollination','ORCHESTRATOR-Ω','pure blank+leak'],['W2','Kitchen Table','ORCHESTRATOR-KITCHEN','TSM-CI + Yes-and'],['W3','Delphi Hackathon','ORCHESTRATOR-DELPHI','rotating Organizer'],['W4','Improv Lab','ORCHESTRATOR-IMPROV','wild extensions'],['W5','Flash-Team','ORCHESTRATOR-FLASH','owner assignment'],['W6','Quarterly Review','ORCHESTRATOR-REVIEW','adversarial board']].map(r=>`<div class="card" style="padding:.28em .6em;margin:.14em 0"><span class="bignum amber" style="font-size:.6em">${r[0]}</span> &nbsp;<span class="ttl" style="font-size:.6em">${r[1]}</span> &nbsp;<span class="small cyan">${r[2]}</span> &nbsp;<span class="tiny muted">${r[3]}</span></div>`).join('')}
+   <p class="tiny amber" style="margin-top:.2em">+ meta-harness (selector) &nbsp; + meta-meta-harness (generator / self-improver)</p>`,{act:A5}));
+const wf=[
+ ['1','Cross-Pollination Engine','ORCHESTRATOR-Ω','Your exact original idea, formalized into a production-grade swarm with inner/outer loops. The purest blanking+leaking signal — no collaboration constraints.','General purpose; the first run; maximum control and strong cross-domain interdependencies.',EX.claude,
+  ['4 outer rounds × 6 inner loops','Randomly blank 1–3 questions per loop','4 AI responses per focal question','Distillation → “Current Best” after each inner loop','Interconnection Synthesis + Safety Check per round'],'Unified 1-page roadmap + 3 flagship experiments.'],
+ ['2','TSM-CI Kitchen Table','ORCHESTRATOR-KITCHEN','TSM/TAS/TRS + Group Flow. Closest to the real DeepMind “kitchen at 11pm” magic, with explicit role differentiation.','The warmest, most human-feeling output; an interconnected research-programme feel; recommended first.',EX.chatgpt,
+  ['4 outer rounds; permanent specialty roles','“Yes-and” improvisation rule throughout','TAS Attention Burst + TRS Synthesis each round','Shared TMS tracker (who-knows-what)','Final program in the voice of Jeff/Koray/Noam/Oriol'],'A “2027 Gemini Research Program” + transactive map.'],
+ ['3','AI-Delphi Swarm Hackathon','ORCHESTRATOR-DELPHI','Fixed 5-round AI-Delphi with a rotating Organizer; ruthless redundancy filtering; a rapid prototyping sprint at the close.','Maximum novelty plus a concrete deliverable in under two hours; rapid landscape mapping.',EX.gemini,
+  ['5 fixed outer rounds','Organizer rotates Claude → GPT → Gemini → Grok','Bridge questions + Redundancy Filter','Rapid Prototyping Sprint at the end','Grant abstract + 1 cheap experiment per question'],'Grant abstracts + prototype experiments + a “Ship It” verdict.'],
+ ['4','Group Flow Improv Lab','ORCHESTRATOR-IMPROV','Sawyer Group Flow + improv theater. “Yes-and” plus three mandatory wild extensions per response, theatrical energy throughout.','Creative breakthrough; escaping local minima; surprising Vedas–physics–agency analogies.',EX.grok,
+  ['3 outer rounds — short and intense','Every response opens “Yes-and building on…”','Each AI proposes exactly 3 wild extensions','Grand Finale as a scripted kitchen-table dialogue'],'A theatrical dialogue script + a “Curtain Call” verdict.'],
+ ['5','Ideaflow + Flash-Team','ORCHESTRATOR-FLASH','Utley Ideaflow + TSM flash-team. Every round a 24-hour sprint with “input obsession” — one new cross-domain source per AI per response.','Walking away with a ready-to-execute research plan with assigned owners.',K.cyan,
+  ['4 outer rounds; “Input Obsession” rule','Grounding Check after rounds 2 & 4','Sprint Retrospective after each round','Final Flash Convergence: ranked priorities + owners'],'Ranked execution roadmap + a “Minimum Lovable Research Program.”'],
+ ['6','Hybrid Quarterly Review','ORCHESTRATOR-REVIEW','The real DeepMind quarterly off-site: bottom-up creative exploration, then a top-down adversarial leadership review.','Something shareable, publication-ready, or suitable for a research proposal.',K.amber,
+  ['Phase 1 — 3 bottom-up rounds + “Leadership Pulse”','Phase 2 — 1 adversarial round','One AI becomes “Jeff Dean + Safety Board / VC / Regulator”','Stress-tests every claim'],'Publication-ready whitepaper, risk register, go/no-go + 3 experiments.']];
+wf.forEach(w=>{
+  S.push(content(`Workflow ${w[0]} · ${w[2]}`,`${w[1]}.`,
+   `<div class="col"><div>${card(w[5],`<div class="label" style="color:${w[5]}">Core DNA</div><p class="small" style="margin-top:.2em">${w[3]}</p>`,'v2')}</div>
+    <div>${card(K.amber,`<div class="label amber">Best for</div><p class="small ice" style="margin-top:.2em">${w[4]}</p>`)}</div></div>`,{act:A5,ts:'1.05em'}));
+  S.push(content(`Workflow ${w[0]} · structure`,`${w[1]} — how it runs.`,
+   `<ul class="clean">${w[6].map(i=>`<li>${i}</li>`).join('')}</ul>
+    ${card(K.success,`<span class="label" style="color:${K.success}">Output</span> &nbsp;<span class="small ice">${w[7]}</span>`,'v2')}`,{act:A5,ts:'1.0em'}));
+});
+S.push(content('Common Ground','Shared DNA across all six.',
+  `<div class="grid g2">${['Clean-slate blanking of the focal question','Leaking of all other questions\' current best','Four AI responses per focal question per round','Orchestrator selects the new Current Best','Distillation identifies the strongest cross-connection','A final convergence synthesis across all questions'].map((t,i)=>card(i%2?K.cyan:K.amber,`<div class="flow"><span class="bignum" style="color:${i%2?K.cyan:K.amber};font-size:.7em">${i+1}</span><span class="small">${t}</span></div>`)).join('')}</div>`,{act:A5}));
+S.push(content('Architecture','One state machine, six configs.',
+  `<p class="small">All six share the same Orchestrator state machine — they differ only in configuration parameters. Adding a workflow is a new Skill file, not new engine code.</p>
+   <pre class="tree mono" style="font-size:.46em">Param           W1     W2     W3     W4     W5     W6
+Outer rounds    4      4      5      3      4      3+1
+Blanked / loop  1–3    2      2      1–3    2      2
+Organizer       —      —      rot.   —      —      critic
+Word budget     —      400    380    380    390    —</pre>`,{act:A5}));
+S.push(content('The Decision Heuristic','How to choose.',
+  `${[['Low time budget','W4 (3 rounds) or W3 (5 short rounds)'],['Need an actionable roadmap','W5'],['Need a whitepaper / board deck','W6'],['Stuck in a local minimum','W4'],['Need stress-testing','W6'],['Depth + interdependency','W1 or W2'],['Team-convergence feel','W2'],['Don\'t know which','meta-harness decides for you']].map(t=>`<div class="card" style="padding:.22em .6em;margin:.1em 0"><span class="small">${t[0]}</span> <span class="ttl amber" style="font-size:.55em;float:right">→ ${t[1]}</span></div>`).join('')}`,{act:A5}));
+S.push(content('Recommended Start','Begin with W2 — Kitchen Table.',
+  `${card(EX.chatgpt,`<p class="small ice">The closest match to what the DeepMind leaders described doing — the long-shared-history, finish-each-other's-sentences dynamic — explicitly maintaining all three transactive systems (TMS / TAS / TRS).</p>`,'v2')}
+   <p class="small amber" style="margin-top:.3em"><em>It also serves as the base for the advanced Tsaheylu-infused evolution, Harness Omega-1.</em></p>`,{act:A5}));
+
+/* --- Act VI --- */
+const A6='ACT VI · THE LAYERS';
+S.push(divider('ACT VI','The Layers','Workflows ⊂ meta-harness ⊂ meta-meta-harness — and the Tsaheylu creative-infusion behind the feasibility gate.'));
+S.push(content('Nested Abstraction','Three nested layers.',
+  `<div style="margin-top:.3em">
+   ${card(K.amber,`<div class="ttl amber" style="font-size:.6em">META-META-HARNESS</div><div class="desc">generates · critiques · self-improves harnesses; hosts Tsaheylu</div>`,'v2')}
+   <div style="margin-left:1.2em">${card(K.cyan,`<div class="ttl cyan" style="font-size:.6em">META-HARNESS</div><div class="desc">goal → decompose → assign → select → run</div>`)}</div>
+   <div style="margin-left:2.4em">${card(K.ice,`<div class="ttl" style="font-size:.6em">WORKFLOWS W1–W6</div><div class="desc">six collaborative-intelligence patterns over the blank+leak engine</div>`)}</div></div>
+   <p class="tiny amber" style="margin-top:.3em">Each layer operates one level of abstraction higher than the one it contains.</p>`,{act:A6}));
+S.push(content('Layer 1','Workflows — the patterns.',
+  `<p class="small">Six workflow skills, each a distinct collaborative-intelligence pattern, sharing the same Phase-0 setup and the same P0–P5 prompt principles.</p>
+   <div class="grid g3">${['W1 Cross-Pollination','W2 Kitchen Table','W3 Delphi Hackathon','W4 Improv Lab','W5 Flash-Team','W6 Quarterly Review'].map(t=>card(K.cyan,`<div class="ttl" style="font-size:.55em">${t}</div>`)).join('')}</div>
+   <p class="tiny amber" style="margin-top:.3em">Shared foundations: _shared/expert-setup.md · _shared/prompt-principles.md</p>`,{act:A6}));
+S.push(content('Layer 2','Meta-Harness — the selector.',
+  `<p class="small">Accepts an arbitrary GOAL, decomposes it into N tightly-coupled sub-questions, assigns lenses, selects the best-fit workflow, and runs the session end to end.</p>
+   <div class="flow">${['GOAL','DECOMPOSE','COUPLING MAP','ASSIGN LENSES','SELECT WORKFLOW','RUN'].map((t,i)=>`<div class="node" style="border-color:${K.amber};min-width:6em">${t}</div>${i<5?'<span class="arr">→</span>':''}`).join('')}</div>
+   <p class="tiny muted" style="margin-top:.3em">Selection keys on time budget × goal type (exploration · breadth-mapping · actionable plan · creative reframe · stress-testing).</p>`,{act:A6}));
+S.push(content('Decomposition Discipline','Good sub-questions only.',
+  `${[['Necessity','removing it would leave a gap in the goal'],['Interdependence','every pair has at least a weak coupling'],['Non-overlap','no two ask the same thing differently'],['Open phrasing','How… / What… / Under what conditions…'],['Size invariant','N ∈ [3,12] — below 3 no cross-pollination; above 12 the leak bloats']].map(t=>`<div class="card" style="padding:.24em .6em;margin:.1em 0"><span class="ttl amber" style="font-size:.55em">${t[0]}</span> &nbsp;<span class="small">${t[1]}</span></div>`).join('')}
+   <p class="tiny cyan" style="margin-top:.2em">A coupling map drives the leaking and the final meta-analysis.</p>`,{act:A6}));
+S.push(content('Layer 3','Meta-Meta-Harness — self-breeding.',
+  `<p class="small">Harnesses that generate, critique, and self-improve other harnesses. By 2026, Meta-Agent, KernelEvolve, and Meta-Harness show the scaffolding is already viable.</p>
+   <div class="flow">${[['GENERATE','spin a new harness variant'],['CRITIQUE','gaps, missing gates, novelty score'],['SELF-IMPROVE','patch · version · changelog ×3']].map((t,i)=>`<div class="node" style="border-color:${K.amber};min-width:8em"><b style="color:${K.amber}">${t[0]}</b><br><span class="muted">${t[1]}</span></div>${i<2?'<span class="arr">→</span>':''}`).join('')}</div>
+   <p class="tiny cyan" style="margin-top:.3em">Recurse three times → an architecture that spins up new research programs for 2030 problems.</p>`,{act:A6,ts:'1.0em'}));
+S.push(content('Operational, Not Decorative','Sci-fi + myth as a breakthrough mechanism.',
+  `<p class="small">Koestler's bisociation: slam two unrelated matrices together until sparks fly. Analogical depth from distant domains doubles idea output in creative teams.</p>
+   <div class="grid g2">${[['Verne','→ the submarine (Simon Lake)'],['Wells','→ liquid-fuel rocket & chain reaction'],['Star Trek','→ the cellphone'],['Clarke','→ the relay satellite / WWW'],['Interstellar','→ accurate black-hole rendering'],['Mythology','→ Talos, Golem, Prometheus pre-figured AI']].map((t,i)=>card(i%2?K.cyan:K.amber,`<span class="ttl" style="font-size:.55em">${t[0]}</span> <span class="desc" style="display:inline">${t[1]}</span>`)).join('')}</div>`,{act:A6,ts:'1.0em'}));
+S.push(content('The Creative Infusion','Tsaheylu — behind the feasibility gate.',
+  `<p class="small">In Avatar, the Tree of Souls is transactive collective intelligence made literal: ancestors queue context through the neural bond while the focal singer receives fresh, uncontaminated insight from the whole forest.</p>
+   <div class="map">${[['Tree of Souls','the six-workflow swarm'],['Four ancestors','Claude · GPT · Gemini · Grok'],['Tsahìk shaman','the Orchestrator'],['Tsaheylu bond','the blank + leak mechanic'],['Sacred disconnection','deleting the focal answer'],['Forest pouring wisdom','siblings flooding the derivation']].map(t=>`<b>${t[0]}</b> <span class="ar">→ ${t[1]}</span><br>`).join('')}</div>
+   ${card(K.cyan,`<p class="tiny cyan"><em>Opt-in only — kept behind the P3/P4 feasibility gate so outputs stay engineering-grade, not poetry.</em></p>`,'v2')}`,{act:A6,ts:'1.0em'}));
+
+/* --- Act VII --- */
+const A7='ACT VII · GUARDRAILS';
+S.push(divider('ACT VII','Principles & Guardrails','Persona P0; principles P1–P5; the per-step verification harness; and absolute transparency with full lineage.'));
+const pData=[
+ ['P0','The Persona.','Triple-PhD MIT Genius — applied to the Orchestrator AND every expert. The epistemic contract that sets the quality floor, breadth, courage, and self-critique for the whole run.',K.amber],
+ ['P1','Fresh first-principles derivation.','The focal question is answered from a clean slate, re-derived from cross-domain fundamentals — never paraphrased from a prior answer.',EX.claude],
+ ['P2','Cross-domain ruthlessness.','Draw from physics, chemistry, biology, neuroscience, philosophy, Vedas/Upanishads, complex systems. Analogies must be mechanistic, not decorative.',K.cyan],
+ ['P3','Sci-fi as SPARK, not SUBSTANCE.','Light inspiration from sci-fi — Asimov, Clarke, Le Guin, Banks\'s Culture Minds, Egan, Watts, Liu Cixin — to escape local minima. If it can\'t become a buildable mechanism, drop it.',EX.grok],
+ ['P4','Implementability & feasibility first.','Buildable with current/near-term ML & compute — or explicitly name the single missing capability that would unlock it. No hand-waving, no magic.',EX.chatgpt],
+ ['P5','Falsifiable close — no length cap.','End every answer with concrete near-term experiments naming confirm/falsify metrics. Length caps removed; detailed chain-of-thought required.',K.success]];
+pData.forEach(p=>S.push(content('Principle · '+p[0],p[1],
+  `${card(p[3],`<div class="flow" style="align-items:flex-start"><span class="bignum" style="color:${p[3]};font-size:2.0em">${p[0]}</span><p class="lead" style="font-size:.62em;max-width:22em">${p[2]}</p></div>`,'v2')}`,{act:A7,ts:'1.1em'})));
+S.push(content('The Verification Harness','A gate at every step.',
+  `<p class="small">A pure function the Orchestrator calls at each gate: <span class="mono cyan">verify(gate_type, context) → { passed, observed, expected }</span>.</p>
+   <div class="grid g3">${['readiness','response-complete','schema','domain-coverage','distillation','safety','participation','completeness','word-count'].map(g=>card(K.cyan,`<span class="mono small ice">${g}_gate</span>`)).join('')}</div>
+   <p class="tiny amber" style="margin-top:.3em">Example · schema_gate: response.startswith(“FRESH DERIVATION FOR Q{n}:”)</p>`,{act:A7}));
+S.push(content('Failure Handling','Escalation & isolation.',
+  `<div class="col"><div>${card(K.amber,`<div class="label amber">Gate-failure escalation</div><ul class="clean"><li>Fail → log → retry once</li><li>Fail again → log attempt 2</li><li>Surface observed vs. expected</li><li>User: continue · retry · abort</li><li>Overrides logged, never silent</li></ul>`,'v2')}</div>
+   <div>${card(K.cyan,`<div class="label cyan">Failure-domain isolation</div><ul class="clean"><li>One tab fails → others continue</li><li>Wrong mode → Phase-0 gate blocks run</li><li>MCP error → 2 retries → escalate</li><li>Login wall → pause, preserve, resume</li><li>Tsaheylu fail → auto-revert to base</li></ul>`,'v2')}</div></div>`,{act:A7}));
+S.push(content('Absolute Openness','Transparency & lineage.',
+  `<p class="small">Every invocation, response, screenshot, current-best, and synthesis is archived as Markdown. The core asymmetry: <strong>blank in-context, preserve in-archive</strong>.</p>
+   <div class="grid g3">${[['Write-only during run','the archive is ground truth'],['Full lineage chain','each best records slot + round'],['Reconstructable','rebuild state from the archive'],['Audit screenshots','evidence, not parsed input'],['gate-log.json','complete pass/fail trail'],['Sacrosanct history','blanking never deletes archive']].map(t=>card(K.success,`<div class="ttl" style="font-size:.55em">${t[0]}</div><div class="desc">${t[1]}</div>`)).join('')}</div>`,{act:A7}));
+
+/* --- Act VIII --- */
+const A8='ACT VIII · PROOF';
+S.push(divider('ACT VIII','Proof','The six DeepMind questions, run live and fully archived — starting with Question 1.'));
+S.push(content('The Worked Example','Six questions, run live and fully archived.',
+  `<p class="small">The canonical demonstration applies the harness to the six open research questions from the DeepMind/Gemini talk — at the genuine frontier of current AI research.</p>
+   <div class="grid g4" style="margin-top:.5em">${[['6','Questions',K.amber],['4','Experts / loop',K.cyan],['W1','Workflow',EX.claude],['100%','Archived',K.success]].map(t=>`<div class="center"><div class="stat" style="color:${t[2]}">${t[0]}</div><div class="statlbl">${t[1]}</div></div>`).join('')}</div>`,{act:A8,ts:'1.0em'}));
+S.push(content('The Live Run','Question 1.',
+  `${card(EX.claude,`<div class="quote" style="font-size:.85em">“How do we build truly self-learning / organic continuously learning architectures?”</div>`,'v2')}
+   <div class="grid g2">${[['Workflow','W1 Cross-Pollination Engine'],['Outer round','01'],['Inner loop','Q1 (seeding — no siblings yet)'],['Invocation','staged & verbatim-archived']].map(t=>`<div class="card" style="padding:.28em .6em"><span class="small amber">${t[0]}</span> &nbsp;<span class="small">${t[1]}</span></div>`).join('')}</div>`,{act:A8}));
+S.push(content('Phase 0 · Convene the Panel','Four tabs, four verified modes.',
+  `<div class="grid g4">${[['Claude','Opus 4.8 · High',EX.claude],['ChatGPT','Pro (Instant → Pro)',EX.chatgpt],['Gemini','3.1 Pro · Extended',EX.gemini],['Grok','Expert',EX.grok]].map(t=>card(t[2],`<div class="ttl">${t[0]}</div><div class="desc" style="color:${t[2]}">${t[1]}</div><div class="tiny" style="color:${K.success}">✓ sanity hello</div>`)).join('')}</div>
+   ${card(K.success,`<p class="small ice">HARD GATE · each composer label verified to match its target string before any round begins. No round runs with the wrong model.</p>`,'v2')}`,{act:A8}));
+S.push(content('The Pipeline','Step by step.',
+  `<div class="grid g4">${['Convene tabs','Configure modes','Sanity ping','Stage invocation','4 expert outputs','Distillation','Current Best'].map((t,i)=>{const done=i<4;return card(done?K.success:K.amber,`<div class="flow"><span class="bignum" style="color:${done?K.success:K.amber};font-size:.7em">${i+1}</span><span class="small">${t}</span></div><div class="tiny" style="color:${done?K.success:K.mist}">${done?'DONE':'PENDING'}</div>`);}).join('')}</div>
+   <p class="tiny muted" style="margin-top:.3em">Setup complete and archived; invocation staged. The transparent ledger captures every step's status and timestamp.</p>`,{act:A8}));
+S.push(content('The Transparent Archive','Everything, on disk.',
+  `<div class="col"><div><pre class="tree mono"><span class="d">examples/{RUNID}/</span>
+├── <span class="d">state/</span>run-{RUNID}.json
+├── <span class="d">outer-loop-01/</span>
+│   ├── <span class="d">inner-loop-Q1/</span>
+│   │   ├── invocation.md
+│   │   ├── <span class="f">response-A/B/C/D.md + .png</span>
+│   │   └── <span class="f">current-best.md</span>
+│   └── post-round-synthesis.md
+├── <span class="d">final-convergence/</span>
+├── final-report.md
+└── gate-log.json</pre></div>
+   <div>${card(K.success,`<div class="label" style="color:${K.success}">Invariants</div><ul class="clean"><li>One-directional push to experts</li><li>Siblings travel via the Orchestrator</li><li>The archive is ground truth</li><li>Screenshots are audit evidence</li></ul>`)}</div></div>`,{act:A8}));
+S.push(content('Reproducibility','Lineage you can replay.',
+  `<p class="small">Every current-best.md records the slot that produced it and the round — a full lineage chain reconstructable from the archive even without the state file.</p>
+   ${['Q1 Round 4 Current Best','← selected from Slot A (response-A-04-Q1.md)','← generated with invocation embedding','Q2…Q6 Round 3 Current Best (verbatim siblings)'].map((t,i)=>`<div class="card" style="margin-left:${i*1.2}em;padding:.24em .6em;margin-top:.14em"><span class="small" style="color:${i===0?K.ice:K.text}">${t}</span></div>`).join('')}
+   <p class="tiny amber" style="margin-top:.2em">Because every invocation.md contains the sibling best-answers verbatim, the run is fully replayable.</p>`,{act:A8}));
+
+/* --- Act IX --- */
+const A9='ACT IX · IMPACT & VISION';
+S.push(divider('ACT IX','Impact & Vision','What it is and isn\'t, why now, the honest limits, the roadmap, and the self-breeding horizon.'));
+S.push(content('Positioning','What it IS — and ISN\'T.',
+  `<div class="col"><div>${card(K.red,`<div class="label" style="color:${K.red}">It is NOT</div><ul class="clean"><li>A simple chat aggregator or A/B tool</li><li>A prompt-chaining library calling 4 APIs</li><li>A voting system where the majority wins</li></ul>`,'v2')}</div>
+   <div>${card(K.success,`<div class="label" style="color:${K.success}">It is</div><p class="small ice" style="margin-top:.2em">A structured, theory-grounded, iterative cross-pollination protocol that produces emergent insight no individual expert would generate alone.</p>`,'v2')}</div></div>`,{act:A9}));
+S.push(content('Timing','Why this, now.',
+  `${[['01','Four credible frontier LLMs exist simultaneously','Claude, GPT, Gemini, Grok — distinct lineages & profiles. Not true two years ago.'],['02','Claude-in-Chrome removes the cost barrier','Orchestration through public browser interfaces — no API cost or rate-limit wall.'],['03','Claude Code encodes it as one command','Multi-step orchestration becomes a reusable skill — as easy as a slash-command.']].map(t=>`<div class="card" style="padding:.3em .6em;margin:.14em 0"><span class="bignum amber" style="font-size:.8em">${t[0]}</span> <span class="ttl" style="font-size:.58em">${t[1]}</span><div class="desc">${t[2]}</div></div>`).join('')}`,{act:A9}));
+S.push(content('Intellectual Honesty','The honest limits.',
+  `<p class="small">The method excels at divergence and recombination but is weaker on convergence to high-confidence insight. What it cannot fully replicate:</p>
+   <ul class="clean"><li>Ruthless self-critique and taste (humans prune; models flatter)</li><li>Deep primary-source immersion + embodied intuition from failures</li><li>Empirical/validation loop — running the experiment, falsifying</li><li>Question reformulation — maybe the real open question is different</li><li>Long incubation + serendipity</li></ul>
+   ${card(K.cyan,`<div class="quote" style="font-size:.8em">A turbocharged idea-generation workshop — not the full end-to-end discovery pipeline.</div>`,'v2')}`,{act:A9}));
+S.push(content('Quick High-Impact Upgrades','The roadmap.',
+  `<div class="grid g2">${[['Role randomization','rotate AI sub-roles per round for fresh framing'],['Critic / Organizer agent','filter redundancy, generate linking questions'],['Cap rounds + falsification','4 rounds + one cheap counter-example round'],['Per-round distillation','name the single most fertile new cross-link'],['Yes-and + build-on','extend prior ideas ruthlessly but kindly'],['Ground every other round','real paper search / code simulation']].map((t,i)=>card(i%2?K.cyan:K.amber,`<div class="ttl" style="font-size:.55em">${t[0]}</div><div class="desc">${t[1]}</div>`)).join('')}</div>`,{act:A9}));
+S.push(content('The Horizon','The self-breeding architecture.',
+  `<p class="small">Infuse each workflow with generator / Dreamer roles. Each becomes a self-breeding innovation organism.</p>
+   <div class="flow">${['Infuse a Dreamer role','Recurse the meta-meta loop','Three iterations deep'].map((t,i)=>`<div class="node" style="border-color:${K.amber};min-width:8em"><b style="color:${K.amber}">0${i+1}</b><br>${t}</div>${i<2?'<span class="arr">→</span>':''}`).join('')}</div>
+   ${card(K.cyan,`<div class="quote" style="font-size:.8em">→ an architecture that can, without human prompting, spin up entirely new research programs for 2030 problems.</div>`,'v2')}`,{act:A9,ts:'1.0em'}));
+S.push(slide(A9,`<div class="center" style="margin-top:1.2em">
+  <span class="eyebrow" style="text-align:center;display:block">The Vision</span>
+  <h1 style="font-size:1.7em;margin:.3em 0">Consciousness scales not by bigger models alone, but by richer, stranger, more myth-drenched connections between minds — biological or synthetic.</h1>
+  <p class="tiny muted">research/04 · the closing note</p></div>`));
+
+/* --- Act X --- */
+const A10='ACT X · CLOSE';
+S.push(divider('ACT X','Close','The thesis, how to start, and an appendix of the references and named systems behind the harness.'));
+S.push(slide(A10,`<div style="margin-top:.6em"><h1 style="font-size:1.9em">Four frontier AIs.<br>Six innovation workflows.<br>One orchestrating mind.</h1>
+  <p class="quote" style="margin-top:.4em">Collective intelligence, engineered — and fully archived.</p>
+  <p class="tiny muted" style="margin-top:.4em">blanking + leaking · Group Genius · TSM-CI · transparent lineage</p></div>`));
+S.push(content('Get Started','Run it.',
+  `${[['meta-harness','state a GOAL — it decomposes, selects, and runs end to end'],['workflow W1–W6','invoke a specific pattern directly if you know the fit'],['meta-meta-harness','generate a new harness variant or apply the Tsaheylu upgrade']].map(t=>`<div class="card" style="padding:.32em .6em;margin:.14em 0"><span class="mono amber" style="font-size:.6em">/ ${t[0]}</span> &nbsp;<span class="small">${t[1]}</span></div>`).join('')}
+   <p class="tiny cyan" style="margin-top:.3em">MIT-licensed · full session archives in examples/ · GitHub Pages site in docs/</p>`,{act:A10}));
+S.push(content('Appendix','References & named systems.',
+  `<div class="grid g3">${[['Group Genius','Keith Sawyer (2007)'],['TSM-CI','Woolley · Gupta et al.'],['Delphi Method','Dalkey & Helmer (1963)'],['Ideaflow','Jeremy Utley (2023)'],['Anchoring Bias','Tversky & Kahneman (1974)'],['Bisociation','Arthur Koestler'],['SEAL · AlphaEvolve','self-improving systems'],['Darwin-Gödel','self-modifying agents'],['Meta-Agent · KernelEvolve','auto multi-agent / inference'],['CollabEval · MacNet','multi-agent LLM frameworks'],['Iteration-of-Thought','iterative reasoning rounds'],['Tsaheylu / Vitraya Ramunong','Avatar mythic-infusion']].map((t,i)=>card(i%2?K.cyan:K.amber,`<div class="ttl" style="font-size:.5em">${t[0]}</div><div class="tiny muted">${t[1]}</div>`)).join('')}</div>
+   <p class="tiny muted" style="margin-top:.3em">Sources: README.md · research/02 · research/04 · documentation/*</p>`,{act:A10}));
+
+/* ---- render ---- */
+document.getElementById('slides').innerHTML = S.join('\n');
+
+/* ---- reveal init ---- */
+const deck = new Reveal({
+  width: 1280, height: 720, margin: 0.055, minScale:0.2, maxScale:1.6,
+  hash:true, controls:true, progress:true, slideNumber:'c/t', center:false,
+  transition:'fade', transitionSpeed:'default', backgroundTransition:'fade',
+  autoSlide: 6000, loop:true, autoSlideStoppable:true,
+});
+deck.initialize().then(()=>{ updateAct(); });
+
+/* footer act label */
+function updateAct(){
+  const cur = deck.getCurrentSlide();
+  const act = cur && cur.getAttribute('data-act');
+  document.getElementById('actfoot').textContent = act || '';
+}
+deck.on('slidechanged', updateAct);
+
+/* play/pause toggle */
+const btn=document.getElementById('playbtn');
+let playing=true;
+function setBtn(){ btn.textContent = playing ? '⏸ Auto' : '▶ Play'; }
+btn.addEventListener('click',()=>{
+  if(playing){ deck.configure({autoSlide:0}); playing=false; }
+  else{ deck.configure({autoSlide:6000}); deck.next(); playing=true; }
+  setBtn();
+});
+deck.on('autoslidepaused',()=>{ playing=false; setBtn(); });
+deck.on('autoslideresumed',()=>{ playing=true; setBtn(); });
+</script>
+</body>
+</html>

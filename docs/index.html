@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Meta-Innovation Harness — a Claude Code skill-set that orchestrates four frontier LLMs via a novel blanking + leaking cross-pollination method to simulate Group Genius on any research goal." />
+  <meta property="og:title" content="Meta-Innovation Harness" />
+  <meta property="og:description" content="Four frontier AIs. Six innovation workflows. One orchestrating mind. Collective intelligence, engineered." />
+  <meta property="og:type" content="website" />
+  <title>Meta-Innovation Harness · dlmastery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════ NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav__inner">
+    <a href="#" class="nav__logo">
+      <div class="nav__logo-mark">MH</div>
+      Meta-Innovation Harness
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="#deck">Deck</a></li>
+      <li><a href="#what">What</a></li>
+      <li><a href="#why">Why</a></li>
+      <li><a href="#how">How</a></li>
+      <li><a href="#experts">Experts</a></li>
+      <li><a href="#workflows">Workflows</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#lineage">Lineage</a></li>
+    </ul>
+    <a href="https://github.com/dlmastery/meta_innovation_harness" class="nav__cta btn" target="_blank" rel="noopener">
+      View on GitHub →
+    </a>
+    <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰ Menu</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════════════ HERO -->
+<section class="hero" id="top">
+  <div class="container hero__content">
+
+    <div class="hero__eyebrow">
+      <span class="hero__tag">v1.0 · MIT License</span>
+      <span class="hero__version">// dlmastery · Claude Code Skill Suite</span>
+    </div>
+
+    <h1 class="hero__title">
+      Meta&#8209;Innovation<br />
+      <em>Harness</em>
+    </h1>
+
+    <p class="hero__subtitle">
+      Four frontier LLMs. Six innovation workflows. One orchestrating mind.
+      A novel <strong>blanking&nbsp;+ leaking cross-pollination</strong> method
+      that engineers Group Genius on any research goal.
+    </p>
+
+    <div class="hero__meta">
+      <div class="hero__meta-item">
+        <span class="hero__meta-val">4</span>
+        <span class="hero__meta-key">Frontier AIs</span>
+      </div>
+      <div class="hero__meta-sep"></div>
+      <div class="hero__meta-item">
+        <span class="hero__meta-val">6</span>
+        <span class="hero__meta-key">Workflows</span>
+      </div>
+      <div class="hero__meta-sep"></div>
+      <div class="hero__meta-item">
+        <span class="hero__meta-val">8</span>
+        <span class="hero__meta-key">Skills total</span>
+      </div>
+      <div class="hero__meta-sep"></div>
+      <div class="hero__meta-item">
+        <span class="hero__meta-val">∞</span>
+        <span class="hero__meta-key">Research goals</span>
+      </div>
+    </div>
+
+    <div class="hero__actions">
+      <a href="https://github.com/dlmastery/meta_innovation_harness" class="btn btn--primary" target="_blank" rel="noopener">
+        ↗ GitHub Repo
+      </a>
+      <a href="#workflows" class="btn btn--secondary">
+        Explore Workflows ↓
+      </a>
+      <a href="https://github.com/dlmastery/meta_innovation_harness/tree/main/documentation" class="btn btn--secondary" target="_blank" rel="noopener">
+        Documentation
+      </a>
+    </div>
+
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <div class="hero__scroll-line"></div>
+    <span class="hero__scroll-label">Scroll</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ DECK -->
+<section class="deck section" id="deck">
+  <div class="container">
+    <div class="deck__header reveal">
+      <div class="label">Pitch Deck · 100 Slides</div>
+      <h2 class="section-title">The Spectacular Deck</h2>
+      <p class="section-body" style="max-width:640px; margin: 1rem 0 0;">
+        A 100-slide, auto-advancing explainer of the entire harness — the problem,
+        the science of Group Genius, the blanking&nbsp;+ leaking invention, the four
+        experts, the six workflows, the meta / meta-meta layers, the guardrails, and
+        the live proof. Plays automatically below; loops every&nbsp;~6&nbsp;seconds.
+      </p>
+    </div>
+
+    <div class="deck__frame reveal reveal-delay-1">
+      <iframe
+        class="deck__iframe"
+        src="slideshow.html#/0"
+        title="Meta-Innovation Harness — 100-slide auto-advancing pitch deck"
+        loading="lazy"
+        allowfullscreen></iframe>
+      <div class="deck__caption">
+        <span class="deck__live"><span class="deck__dot"></span> AUTOPLAY · LOOP</span>
+        <span>100 slides · 10 acts · dark / amber / cyan</span>
+      </div>
+    </div>
+
+    <div class="deck__actions reveal reveal-delay-2">
+      <a href="slideshow.html" class="btn btn--primary" target="_blank" rel="noopener">
+        ▶ Open Full Slideshow
+      </a>
+      <a href="../deck/Meta-Innovation-Harness-Pitch.pptx" class="btn btn--secondary" download>
+        ↓ Download .pptx (100 slides)
+      </a>
+      <a href="../deck/OUTLINE.md" class="btn btn--secondary" target="_blank" rel="noopener">
+        Slide-by-slide outline
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ FOUR EXPERTS -->
+<section class="experts" id="experts">
+  <div class="container">
+    <div class="experts__header reveal">
+      <div class="label">The Four Polymaths</div>
+      <h2 class="section-title" style="text-align:center;">Fixed-Lens Expert Ensemble</h2>
+      <p class="section-body" style="max-width:600px; margin: 1rem auto 0; text-align:center;">
+        Each frontier LLM receives a fixed disciplinary lens — a permanent epistemic stance
+        it cannot abandon. The tension between lenses is the engine of novelty.
+      </p>
+    </div>
+
+    <div class="experts__grid reveal reveal-delay-2">
+
+      <div class="expert-card expert-card--claude">
+        <div class="expert-card__icon">🧬</div>
+        <div class="expert-card__model">Claude</div>
+        <div class="expert-card__name">Anthropic · Biological Philosopher</div>
+        <ul class="expert-card__lenses">
+          <li>Evolutionary Biology &amp; Systems Biology</li>
+          <li>Ancient Texts &amp; Classical Wisdom</li>
+          <li>Continental Philosophy &amp; Ethics</li>
+          <li>Pattern languages of living systems</li>
+        </ul>
+      </div>
+
+      <div class="expert-card expert-card--chatgpt">
+        <div class="expert-card__icon">⚛️</div>
+        <div class="expert-card__model">ChatGPT (GPT)</div>
+        <div class="expert-card__name">OpenAI · Physical Engineer</div>
+        <ul class="expert-card__lenses">
+          <li>Theoretical &amp; Applied Physics</li>
+          <li>Chemistry &amp; Material Science</li>
+          <li>Systems Engineering &amp; Mechanism</li>
+          <li>Quantitative first-principles modeling</li>
+        </ul>
+      </div>
+
+      <div class="expert-card expert-card--gemini">
+        <div class="expert-card__icon">📊</div>
+        <div class="expert-card__model">Gemini</div>
+        <div class="expert-card__name">Google DeepMind · Human-System Evaluator</div>
+        <ul class="expert-card__lenses">
+          <li>Social Science &amp; Behavioral Economics</li>
+          <li>Product Strategy &amp; Market Dynamics</li>
+          <li>HCI &amp; User Experience Research</li>
+          <li>Evaluation methodology &amp; measurement</li>
+        </ul>
+      </div>
+
+      <div class="expert-card expert-card--grok">
+        <div class="expert-card__icon">🌀</div>
+        <div class="expert-card__model">Grok</div>
+        <div class="expert-card__name">xAI · Radical World-Modeler</div>
+        <ul class="expert-card__lenses">
+          <li>Creative world-modeling &amp; scenario design</li>
+          <li>Radical efficiency &amp; constraint-stripping</li>
+          <li>Contrarian hypothesis generation</li>
+          <li>Science fiction as predictive methodology</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ WHAT / WHY / WHO / WHERE / WHEN / HOW -->
+<section class="six-w section" id="what">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">Six Essential Questions</div>
+      <h2 class="section-title">What · Why · Who · Where · When · How</h2>
+    </div>
+
+    <div class="six-w__grid">
+
+      <!-- WHAT -->
+      <div class="w-card reveal reveal-delay-1">
+        <div class="w-card__num">01</div>
+        <div class="w-card__q">What?</div>
+        <div class="w-card__title">A Collective Intelligence Engine for AI</div>
+        <div class="w-card__body">
+          The Meta-Innovation Harness is a structured Claude Code skill-set — six
+          "Innovation Harness" workflows, a meta-skill (auto-selects the right workflow),
+          and a meta-meta-skill (generates &amp; self-improves harnesses) — that directs
+          four browser-driven frontier LLMs as a coordinated expert ensemble.
+          The worked example targets six open research questions from a
+          Google DeepMind/Gemini leadership talk.
+        </div>
+      </div>
+
+      <!-- WHY -->
+      <div class="w-card reveal reveal-delay-2">
+        <div class="w-card__num">02</div>
+        <div class="w-card__q">Why?</div>
+        <div class="w-card__title">Because No Single Mind Is Enough</div>
+        <div class="w-card__body">
+          Real breakthroughs emerge at disciplinary intersections — biology informing
+          physics, philosophy correcting engineering. The Transactive Systems Model of
+          Collective Intelligence (TSM-CI) and "Group Genius" theory show that
+          structured cross-pollination among diverse experts outperforms any individual,
+          including the best individual AI. This harness operationalises that theory
+          as a repeatable, automatable protocol.
+        </div>
+      </div>
+
+      <!-- WHO -->
+      <div class="w-card reveal reveal-delay-3">
+        <div class="w-card__num">03</div>
+        <div class="w-card__q">Who?</div>
+        <div class="w-card__title">Orchestrator + Four Polymath Super-Experts</div>
+        <div class="w-card__body">
+          An Orchestrator AI (Claude Code, operating as a Triple-PhD MIT Genius)
+          conducts the session. The four frontier LLMs — Claude, ChatGPT/GPT,
+          Gemini, and Grok — each embody a permanent disciplinary stance.
+          Intended users: researchers, strategists, innovation leads, and
+          AI-augmented knowledge workers who need structured ensemble cognition.
+        </div>
+      </div>
+
+      <!-- WHERE -->
+      <div class="w-card reveal reveal-delay-4">
+        <div class="w-card__num">04</div>
+        <div class="w-card__q">Where?</div>
+        <div class="w-card__title">Claude Code + Browser via Claude-in-Chrome</div>
+        <div class="w-card__body">
+          Runs entirely inside Claude Code CLI. All four frontier LLMs are driven
+          through the <strong>Claude-in-Chrome</strong> browser extension — no APIs,
+          no rate limits, no vendor lock-in beyond the four public chat interfaces.
+          Outputs are archived as Markdown under <code>examples/</code> in the repo
+          for full transparency and reproducibility.
+        </div>
+      </div>
+
+      <!-- WHEN -->
+      <div class="w-card reveal reveal-delay-5">
+        <div class="w-card__num">05</div>
+        <div class="w-card__q">When?</div>
+        <div class="w-card__title">Any High-Stakes Research Decision</div>
+        <div class="w-card__body">
+          Deploy when a question is too multi-dimensional for a single expert:
+          frontier science, product strategy, policy, speculative engineering, or
+          moonshot ideation. The inner/outer loop structure scales from a 30-minute
+          "flash team" sprint to a quarterly deep-dive review lasting hours —
+          chosen by the meta-skill based on goal complexity and time budget.
+        </div>
+      </div>
+
+      <!-- HOW -->
+      <div class="w-card reveal reveal-delay-6">
+        <div class="w-card__num">06</div>
+        <div class="w-card__q">How?</div>
+        <div class="w-card__title">Blanking + Leaking Cross-Pollination</div>
+        <div class="w-card__body">
+          For each focal question: <strong>blank</strong> (delete the prior answer
+          for that question — forcing a clean-slate re-derivation) but
+          <strong>leak</strong> (show the evolving best answers for all OTHER
+          questions). Rotate across questions in inner loops, then synthesise in
+          outer loops. This destroys anchoring bias while preserving cross-domain
+          signal, producing genuinely novel combinatorial insight.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ PERSONA -->
+<section class="persona section" id="persona">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">Operating Stance</div>
+      <h2 class="section-title">The Persona</h2>
+    </div>
+
+    <div class="persona__card reveal reveal-delay-2">
+      <div class="persona__avatar" aria-hidden="true">🎓</div>
+      <div>
+        <div class="persona__title">Triple-PhD MIT Genius</div>
+        <div class="persona__subtitle">Elite of the Elite · Orchestrator Persona</div>
+        <p class="persona__body">
+          Every session begins with a persona declaration: the Orchestrator operates
+          as a <em>Triple-PhD MIT Genius</em> — elite of the elite, best on Earth
+          in thought leadership, novelty, creativity, and extreme polymathy,
+          drawing wisdom from ALL fields simultaneously. This is not mere
+          motivational framing; it is a formal epistemic contract that shapes
+          the depth of prompting, the breadth of reference, the courage to
+          pursue genuinely radical ideas, and the ruthlessness of self-critique.
+          The persona is inherited by each expert AI for the duration of their
+          lens-specific contribution, then synthesised by the Orchestrator into
+          the integrated output.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ WORKFLOWS -->
+<section class="workflows section" id="workflows">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">Six Workflows + Two Meta-Skills</div>
+      <h2 class="section-title">The Innovation Harness Suite</h2>
+      <p class="section-body">
+        Each workflow is a distinct orchestration protocol — different cadence,
+        format, and cognitive pressure profile. The meta-skill auto-selects;
+        the meta-meta-skill generates new ones.
+      </p>
+    </div>
+
+    <div class="workflows__grid">
+
+      <div class="workflow-card reveal reveal-delay-1">
+        <div class="workflow-card__num">// 01</div>
+        <div class="workflow-card__name">Cross-Pollination Engine</div>
+        <div class="workflow-card__desc">
+          Pure blanking + leaking across all four experts on a fixed question set.
+          The foundational protocol: each expert erases their own prior and reads
+          all others' evolving best answers before responding afresh.
+        </div>
+        <span class="workflow-card__tag">Core Protocol</span>
+      </div>
+
+      <div class="workflow-card reveal reveal-delay-2">
+        <div class="workflow-card__num">// 02</div>
+        <div class="workflow-card__name">TSM-CI Kitchen Table</div>
+        <div class="workflow-card__desc">
+          Simulates the Transactive Systems Model of Collective Intelligence as an
+          intimate "kitchen table" dialogue — structured argument, role-acknowledgement,
+          and shared memory building across the four expert nodes.
+        </div>
+        <span class="workflow-card__tag">Theory-Grounded</span>
+      </div>
+
+      <div class="workflow-card reveal reveal-delay-3">
+        <div class="workflow-card__num">// 03</div>
+        <div class="workflow-card__name">AI-Delphi Swarm Hackathon</div>
+        <div class="workflow-card__desc">
+          Multi-round structured expert elicitation (Delphi method) compressed into
+          a hackathon cadence — rapid iteration, anonymous scoring rounds, and
+          forced convergence toward testable hypotheses.
+        </div>
+        <span class="workflow-card__tag">High-Velocity</span>
+      </div>
+
+      <div class="workflow-card reveal reveal-delay-4">
+        <div class="workflow-card__num">// 04</div>
+        <div class="workflow-card__name">Group Flow Improv Lab</div>
+        <div class="workflow-card__desc">
+          Draws on Keith Sawyer's Group Flow research: improvisational constraints,
+          "yes-and" extension rules, and real-time creative pressure to push all
+          four experts beyond their safe answer envelopes simultaneously.
+        </div>
+        <span class="workflow-card__tag">Creative Pressure</span>
+      </div>
+
+      <div class="workflow-card reveal reveal-delay-5">
+        <div class="workflow-card__num">// 05</div>
+        <div class="workflow-card__name">Ideaflow Flash-Team</div>
+        <div class="workflow-card__desc">
+          Time-boxed sprint format (30–60 minutes) inspired by Jeremy Utley's
+          Ideaflow methodology: maximum idea surface area in minimum time,
+          with the Orchestrator as timekeeper and synthesiser.
+        </div>
+        <span class="workflow-card__tag">Time-Boxed Sprint</span>
+      </div>
+
+      <div class="workflow-card reveal reveal-delay-6">
+        <div class="workflow-card__num">// 06</div>
+        <div class="workflow-card__name">Hybrid Quarterly Review</div>
+        <div class="workflow-card__desc">
+          Long-horizon structured review: re-evaluates prior outputs from all
+          five workflows against new evidence, expert critique, and domain
+          updates. Closes the feedback loop between sprint and strategy.
+        </div>
+        <span class="workflow-card__tag">Strategic Horizon</span>
+      </div>
+
+    </div>
+
+    <!-- Meta-skills -->
+    <div class="meta-row">
+      <div class="meta-card reveal reveal-delay-1">
+        <div class="meta-card__badge">// Meta-Skill · Layer 7</div>
+        <div class="meta-card__name">Workflow Selector (Meta-Skill)</div>
+        <div class="meta-card__desc">
+          Receives a research goal + context → diagnoses the optimal workflow
+          from the six above → instantiates and runs it end-to-end. Zero
+          configuration required by the user; the meta-skill handles all
+          parameterisation and expert briefing.
+        </div>
+      </div>
+      <div class="meta-card reveal reveal-delay-2">
+        <div class="meta-card__badge">// Meta-Meta-Skill · Layer 8</div>
+        <div class="meta-card__name">Harness Generator (Meta-Meta-Skill)</div>
+        <div class="meta-card__desc">
+          Generates entirely new harness workflows, critiques them against
+          collective-intelligence theory, and self-improves them. Turns the
+          harness into a self-extending system — the skills write new skills.
+          The ultimate expression of recursive innovation architecture.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ ARCHITECTURE / HOW IT LOOPS -->
+<section class="arch section" id="architecture">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">System Architecture</div>
+      <h2 class="section-title">The Blanking + Leaking Loop</h2>
+      <p class="section-body">
+        Inner loops cycle across individual questions; outer loops synthesise across
+        all experts and all questions. The Orchestrator AI holds the state machine.
+      </p>
+    </div>
+
+    <div class="arch__inner reveal reveal-delay-2">
+      <div class="arch__svg-container">
+        <!-- Architecture diagram as inline SVG -->
+        <svg viewBox="0 0 820 520" xmlns="http://www.w3.org/2000/svg"
+             style="width:100%; max-width:820px; display:block; margin:0 auto;"
+             aria-label="Architecture diagram: Blanking + Leaking Loop">
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#2a4060"/>
+            </marker>
+            <marker id="arr-amber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#f5a623"/>
+            </marker>
+            <marker id="arr-cyan" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#00d4ff"/>
+            </marker>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- Background grid -->
+          <rect width="820" height="520" fill="#0d1117" rx="8"/>
+          <line x1="0" y1="60" x2="820" y2="60" stroke="#1e2d3d" stroke-width="1"/>
+
+          <!-- Header -->
+          <text x="16" y="38" font-family="IBM Plex Mono, monospace" font-size="11" fill="#7a8fa0" letter-spacing="2">// META-INNOVATION HARNESS · ARCHITECTURE</text>
+          <text x="700" y="38" font-family="IBM Plex Mono, monospace" font-size="11" fill="#f5a623">v1.0</text>
+
+          <!-- Orchestrator box (centre top) -->
+          <rect x="290" y="80" width="240" height="72" rx="6" fill="#131b25" stroke="#f5a623" stroke-width="1.5"/>
+          <text x="410" y="104" font-family="Syne, sans-serif" font-size="13" font-weight="700" fill="#f5a623" text-anchor="middle">ORCHESTRATOR AI</text>
+          <text x="410" y="120" font-family="IBM Plex Mono, monospace" font-size="9" fill="#c8bfaa" text-anchor="middle">Triple-PhD MIT Genius</text>
+          <text x="410" y="136" font-family="IBM Plex Mono, monospace" font-size="9" fill="#7a8fa0" text-anchor="middle">Claude Code · Skill Runner</text>
+
+          <!-- Claude-in-Chrome bridge -->
+          <rect x="310" y="196" width="200" height="36" rx="4" fill="#0d1117" stroke="#2a4060" stroke-width="1"/>
+          <text x="410" y="211" font-family="IBM Plex Mono, monospace" font-size="9" fill="#00d4ff" text-anchor="middle" letter-spacing="1">CLAUDE-IN-CHROME</text>
+          <text x="410" y="224" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">Browser Automation Bridge</text>
+
+          <!-- Arrow: Orchestrator → Bridge -->
+          <line x1="410" y1="152" x2="410" y2="196" stroke="#f5a623" stroke-width="1.5" marker-end="url(#arr-amber)"/>
+
+          <!-- Expert boxes -->
+          <!-- Claude -->
+          <rect x="20" y="290" width="170" height="100" rx="6" fill="#131b25" stroke="#cc785c" stroke-width="1.5"/>
+          <text x="105" y="312" font-family="Syne, sans-serif" font-size="12" font-weight="700" fill="#cc785c" text-anchor="middle">CLAUDE</text>
+          <text x="105" y="328" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">Biology · Ancient Texts</text>
+          <text x="105" y="341" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">Philosophy</text>
+          <rect x="40" y="355" width="130" height="22" rx="3" fill="#0d1117" stroke="#1e2d3d"/>
+          <text x="105" y="370" font-family="IBM Plex Mono, monospace" font-size="8" fill="#c8bfaa" text-anchor="middle">Anthropic · Browser Tab</text>
+
+          <!-- GPT -->
+          <rect x="220" y="290" width="170" height="100" rx="6" fill="#131b25" stroke="#19c37d" stroke-width="1.5"/>
+          <text x="305" y="312" font-family="Syne, sans-serif" font-size="12" font-weight="700" fill="#19c37d" text-anchor="middle">ChatGPT / GPT</text>
+          <text x="305" y="328" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">Physics · Chemistry</text>
+          <text x="305" y="341" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">Engineering</text>
+          <rect x="240" y="355" width="130" height="22" rx="3" fill="#0d1117" stroke="#1e2d3d"/>
+          <text x="305" y="370" font-family="IBM Plex Mono, monospace" font-size="8" fill="#c8bfaa" text-anchor="middle">OpenAI · Browser Tab</text>
+
+          <!-- Gemini -->
+          <rect x="420" y="290" width="170" height="100" rx="6" fill="#131b25" stroke="#4285f4" stroke-width="1.5"/>
+          <text x="505" y="312" font-family="Syne, sans-serif" font-size="12" font-weight="700" fill="#4285f4" text-anchor="middle">GEMINI</text>
+          <text x="505" y="328" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">Social Science · Product</text>
+          <text x="505" y="341" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">HCI · Evaluation</text>
+          <rect x="440" y="355" width="130" height="22" rx="3" fill="#0d1117" stroke="#1e2d3d"/>
+          <text x="505" y="370" font-family="IBM Plex Mono, monospace" font-size="8" fill="#c8bfaa" text-anchor="middle">Google DeepMind · Tab</text>
+
+          <!-- Grok -->
+          <rect x="620" y="290" width="170" height="100" rx="6" fill="#131b25" stroke="#9333ea" stroke-width="1.5"/>
+          <text x="705" y="312" font-family="Syne, sans-serif" font-size="12" font-weight="700" fill="#9333ea" text-anchor="middle">GROK</text>
+          <text x="705" y="328" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">World-Modeling · Radical</text>
+          <text x="705" y="341" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">Efficiency · Contrarian</text>
+          <rect x="640" y="355" width="130" height="22" rx="3" fill="#0d1117" stroke="#1e2d3d"/>
+          <text x="705" y="370" font-family="IBM Plex Mono, monospace" font-size="8" fill="#c8bfaa" text-anchor="middle">xAI · Browser Tab</text>
+
+          <!-- Bridge → Experts arrows -->
+          <line x1="340" y1="232" x2="105" y2="290" stroke="#2a4060" stroke-width="1.2" marker-end="url(#arr)"/>
+          <line x1="370" y1="232" x2="305" y2="290" stroke="#2a4060" stroke-width="1.2" marker-end="url(#arr)"/>
+          <line x1="450" y1="232" x2="505" y2="290" stroke="#2a4060" stroke-width="1.2" marker-end="url(#arr)"/>
+          <line x1="480" y1="232" x2="705" y2="290" stroke="#2a4060" stroke-width="1.2" marker-end="url(#arr)"/>
+
+          <!-- Blanking + Leaking labels -->
+          <text x="410" y="266" font-family="IBM Plex Mono, monospace" font-size="9" fill="#f5a623" text-anchor="middle" letter-spacing="1">BLANK own answer · LEAK others' answers</text>
+
+          <!-- Output/Archive box -->
+          <rect x="310" y="442" width="200" height="48" rx="4" fill="#0d1117" stroke="#22c55e" stroke-width="1"/>
+          <text x="410" y="462" font-family="IBM Plex Mono, monospace" font-size="9" fill="#22c55e" text-anchor="middle" letter-spacing="1">ARCHIVE → examples/</text>
+          <text x="410" y="478" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">Full Markdown transparency</text>
+
+          <!-- Expert responses → Archive -->
+          <line x1="105" y1="390" x2="340" y2="442" stroke="#1e2d3d" stroke-width="1" marker-end="url(#arr)"/>
+          <line x1="305" y1="390" x2="370" y2="442" stroke="#1e2d3d" stroke-width="1" marker-end="url(#arr)"/>
+          <line x1="505" y1="390" x2="450" y2="442" stroke="#1e2d3d" stroke-width="1" marker-end="url(#arr)"/>
+          <line x1="705" y1="390" x2="480" y2="442" stroke="#1e2d3d" stroke-width="1" marker-end="url(#arr)"/>
+
+          <!-- Archive → Orchestrator (outer loop) -->
+          <path d="M 510 466 Q 780 466 780 200 Q 780 100 530 100" stroke="#00d4ff" stroke-width="1.2" fill="none" stroke-dasharray="4 3" marker-end="url(#arr-cyan)"/>
+          <text x="786" y="286" font-family="IBM Plex Mono, monospace" font-size="8" fill="#00d4ff" transform="rotate(90, 786, 286)">OUTER LOOP · SYNTHESIS</text>
+
+          <!-- Inner loop annotation -->
+          <text x="410" y="510" font-family="IBM Plex Mono, monospace" font-size="8" fill="#7a8fa0" text-anchor="middle">↺ Inner loop: rotate across questions per expert · Outer loop: synthesise all</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ WHY section (Method deep dive) -->
+<section class="method section" id="why">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">Theoretical Foundation</div>
+      <h2 class="section-title">Why Blanking + Leaking Works</h2>
+      <p class="section-body">
+        The method is grounded in cognitive science, collective intelligence theory,
+        and information-theoretic principles of creative recombination.
+      </p>
+    </div>
+
+    <div class="six-w__grid" style="margin-top:3rem;">
+      <div class="w-card reveal reveal-delay-1">
+        <div class="w-card__q" style="font-size:1.1rem;">Group Genius</div>
+        <div class="w-card__title">Sawyer's Collaborative Emergence</div>
+        <div class="w-card__body">
+          Keith Sawyer's research shows that genuine creativity emerges from structured
+          improvisation between diverse experts — not from individuals working alone.
+          The harness encodes this as an algorithmic protocol.
+        </div>
+      </div>
+      <div class="w-card reveal reveal-delay-2">
+        <div class="w-card__q" style="font-size:1.1rem;">TSM-CI</div>
+        <div class="w-card__title">Transactive Systems Model</div>
+        <div class="w-card__body">
+          The Transactive Memory / Systems Model of Collective Intelligence holds that
+          group IQ exceeds individual IQ when members hold complementary knowledge and
+          communicate it efficiently. The four fixed lenses simulate this maximally.
+        </div>
+      </div>
+      <div class="w-card reveal reveal-delay-3">
+        <div class="w-card__q" style="font-size:1.1rem;">De-Anchoring</div>
+        <div class="w-card__title">Blanking Destroys Anchoring Bias</div>
+        <div class="w-card__body">
+          Cognitive anchoring — over-relying on the first answer — is the dominant
+          failure mode of sequential LLM reasoning. Forcing deletion of the prior
+          answer and mandatory re-derivation from scratch eliminates this bias completely.
+        </div>
+      </div>
+      <div class="w-card reveal reveal-delay-4">
+        <div class="w-card__q" style="font-size:1.1rem;">Cross-Signal</div>
+        <div class="w-card__title">Leaking Preserves Combinatorial Signal</div>
+        <div class="w-card__body">
+          While blanking eliminates anchoring within a question, leaking provides
+          the cross-domain signal that drives genuine novelty. Seeing biology's
+          answer before re-deriving the physics answer forces unexpected synthesis.
+        </div>
+      </div>
+      <div class="w-card reveal reveal-delay-5">
+        <div class="w-card__q" style="font-size:1.1rem;">Delphi</div>
+        <div class="w-card__title">Structured Iteration Toward Truth</div>
+        <div class="w-card__body">
+          Outer loops mirror the Delphi method's multi-round expert elicitation:
+          each pass allows experts to update positions in light of synthesised
+          group output, converging toward robustly defended consensus positions
+          or surfacing genuinely irreducible tensions.
+        </div>
+      </div>
+      <div class="w-card reveal reveal-delay-6">
+        <div class="w-card__q" style="font-size:1.1rem;">Worked Example</div>
+        <div class="w-card__title">Six DeepMind Research Questions</div>
+        <div class="w-card__body">
+          The canonical demonstration applies the harness to six open frontier
+          questions from a Google DeepMind/Gemini leadership talk — topics
+          at the genuine edge of current AI research. Full archived outputs
+          live in <code>examples/</code>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ TRANSPARENCY / LINEAGE -->
+<section class="transparency section" id="lineage">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">Transparency &amp; Lineage</div>
+      <h2 class="section-title">Absolute Openness</h2>
+      <p class="section-body">
+        Every interaction is archived. Every design choice is documented.
+        Every intellectual ancestor is acknowledged.
+      </p>
+    </div>
+
+    <div class="transparency__grid">
+      <div class="t-card reveal reveal-delay-1">
+        <div class="t-card__icon">📁</div>
+        <div class="t-card__title">Full Session Archives</div>
+        <div class="t-card__body">
+          Every workflow run produces a complete Markdown transcript archived under
+          <code>examples/</code> — including all prompts, all expert responses, all
+          Orchestrator synthesis steps, and all iteration traces. Science-grade
+          reproducibility.
+        </div>
+      </div>
+      <div class="t-card reveal reveal-delay-2">
+        <div class="t-card__icon">📐</div>
+        <div class="t-card__title">Design Rationale</div>
+        <div class="t-card__body">
+          Every workflow design decision is explained in <code>documentation/</code>.
+          The PRD, the theoretical grounding, the lens-assignment choices, and the
+          meta-skill selection logic are all documented to PhD-thesis standard.
+        </div>
+      </div>
+      <div class="t-card reveal reveal-delay-3">
+        <div class="t-card__icon">🔗</div>
+        <div class="t-card__title">Intellectual Lineage</div>
+        <div class="t-card__body">
+          Built on the same author/persona's earlier work in automated research
+          pipelines. See sibling repos below. Cites Sawyer, Woolley, Delphi method,
+          TSM-CI, Ideaflow (Utley), and Group Flow literature throughout.
+        </div>
+      </div>
+      <div class="t-card reveal reveal-delay-4">
+        <div class="t-card__icon">⚖️</div>
+        <div class="t-card__title">MIT License</div>
+        <div class="t-card__body">
+          Fully open-source under the MIT License. Fork it, extend it, build on it.
+          Contributions welcome — especially new workflow harnesses submitted via PR
+          and validated against the meta-meta-skill's critique protocol.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ SIBLINGS -->
+<section class="siblings section" id="siblings">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">Sibling Repositories · Same Author</div>
+      <h2 class="section-title">The Broader Research Lineage</h2>
+    </div>
+
+    <div class="siblings__grid">
+
+      <a href="https://github.com/dlmastery/autoresearch"
+         class="repo-card reveal reveal-delay-1"
+         target="_blank" rel="noopener">
+        <div class="repo-card__lang">// AutoResearch</div>
+        <div class="repo-card__name">autoresearch</div>
+        <div class="repo-card__desc">
+          The predecessor pipeline for automated AI research orchestration.
+          Established the author's core methodology of LLM-as-researcher workflows,
+          multi-step research loops, and structured output synthesis — the intellectual
+          parent of the Meta-Innovation Harness.
+        </div>
+        <div class="repo-card__link">
+          github.com/dlmastery/autoresearch →
+        </div>
+      </a>
+
+      <a href="https://github.com/dlmastery/autoresearchindexstock"
+         class="repo-card reveal reveal-delay-2"
+         target="_blank" rel="noopener">
+        <div class="repo-card__lang">// AutoResearch · Domain Application</div>
+        <div class="repo-card__name">autoresearchindexstock</div>
+        <div class="repo-card__desc">
+          Domain-specific application of the autoresearch methodology to index
+          and stock market research — demonstrating how the pipeline generalises
+          from open-ended research to quantitative financial analysis workflows.
+        </div>
+        <div class="repo-card__link">
+          github.com/dlmastery/autoresearchindexstock →
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Repo structure quick reference -->
+    <div class="reveal reveal-delay-3" style="margin-top:3rem;">
+      <div class="arch__svg-container" style="background:var(--void-2);">
+        <div class="label" style="margin-bottom:1rem;">// Repository Structure</div>
+        <pre style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); line-height: 1.9; overflow-x:auto;">
+<span style="color:var(--ice);">meta_innovation_harness/</span>
+├── <span style="color:var(--amber);">skills/</span>              <span style="color:var(--mist);"># All 8 Claude Code skills (.md)</span>
+│   ├── <span style="color:var(--cyan);">01_cross_pollination_engine.md</span>
+│   ├── <span style="color:var(--cyan);">02_tsm_ci_kitchen_table.md</span>
+│   ├── <span style="color:var(--cyan);">03_ai_delphi_swarm_hackathon.md</span>
+│   ├── <span style="color:var(--cyan);">04_group_flow_improv_lab.md</span>
+│   ├── <span style="color:var(--cyan);">05_ideaflow_flash_team.md</span>
+│   ├── <span style="color:var(--cyan);">06_hybrid_quarterly_review.md</span>
+│   ├── <span style="color:var(--cyan);">07_meta_skill_selector.md</span>
+│   └── <span style="color:var(--cyan);">08_meta_meta_harness_generator.md</span>
+├── <span style="color:var(--amber);">examples/</span>            <span style="color:var(--mist);"># Full archived session transcripts</span>
+├── <span style="color:var(--amber);">research/</span>            <span style="color:var(--mist);"># Source questions, references, notes</span>
+├── <span style="color:var(--amber);">documentation/</span>       <span style="color:var(--mist);"># PRD, theory docs, how-to guides</span>
+│   └── <span style="color:var(--amber);">about/</span>           <span style="color:var(--mist);"># what / why / who / where / when / how</span>
+├── <span style="color:var(--amber);">docs/</span>                <span style="color:var(--mist);"># GitHub Pages static site (this site)</span>
+└── <span style="color:var(--amber);">assets/</span>             <span style="color:var(--mist);"># Shared assets</span>
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="footer__copy">
+      © 2025 dlmastery · Meta-Innovation Harness · MIT License ·
+      Built with Claude Code
+    </span>
+    <ul class="footer__links">
+      <li><a href="https://github.com/dlmastery/meta_innovation_harness" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://github.com/dlmastery/autoresearch" target="_blank" rel="noopener">autoresearch</a></li>
+      <li><a href="https://github.com/dlmastery/autoresearchindexstock" target="_blank" rel="noopener">autoresearchindexstock</a></li>
+      <li><a href="https://github.com/dlmastery/meta_innovation_harness/tree/main/documentation" target="_blank" rel="noopener">Docs</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
