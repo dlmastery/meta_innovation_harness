@@ -19,6 +19,7 @@ This folder documents a complete research arc: from a Google DeepMind leadership
 | [02-methodology-theory.md](02-methodology-theory.md) | Theoretical foundation of the synthesis methodology: the blanking+leaking cross-pollination mechanic, Group Genius / Group Flow, the Transactive Systems Model of Collective Intelligence (TMS/TAS/TRS), and the five named recipe formats. |
 | [03-the-six-workflows-overview.md](03-the-six-workflows-overview.md) | Concise reference table of all six fully autonomous Innovation Harness workflows — name, orchestrator codename, core DNA, best use case — with pointers to the full master prompts in the source file. |
 | [04-meta-meta-and-tsaheylu.md](04-meta-meta-and-tsaheylu.md) | The "Innovation Harness" naming, the meta-meta self-improving harness concept, the Tsaheylu/Avatar mythic-infusion upgrade, and the full infused Orchestrator prompt for Harness Omega-1 (Vitraya Ramunong Kitchen Table). |
+| [continual-learning-llms-july-2026/](continual-learning-llms-july-2026/) | Publication-ready five-contender W6 quarterly review of continual learning in LLMs through July 2026, including evidence, adversarial boards, a 2026–2030 programme, audit records, provenance, and checksums. |
 
 ---
 
@@ -29,3 +30,4 @@ This folder documents a complete research arc: from a Google DeepMind leadership
 3. Read **[02-methodology-theory.md](02-methodology-theory.md)** to understand *why* the synthesis process works.
 4. Consult **[03-the-six-workflows-overview.md](03-the-six-workflows-overview.md)** when choosing which workflow to run.
 5. Read **[04-meta-meta-and-tsaheylu.md](04-meta-meta-and-tsaheylu.md)** for the advanced mythic-infusion layer and self-improving meta-harness concept.
+6. Open **[continual-learning-llms-july-2026/](continual-learning-llms-july-2026/)** for the complete continual-learning quarterly review and its Conditional-Go decision package.

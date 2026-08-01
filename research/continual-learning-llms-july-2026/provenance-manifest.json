@@ -1,0 +1,150 @@
+{
+  "run_id": "20260801-W6-continual-learning-july2026",
+  "created_at_utc": "2026-08-01T06:06:32Z",
+  "updated_at_utc": "2026-08-01T10:57:17Z",
+  "status": "publication_ready_for_repository_integration",
+  "objective": "Research the state of the art and future directions for continuous/continual learning in LLMs through 2026-07-31 using the Meta-Innovation Harness W6 workflow and five heterogeneous CLI experts.",
+  "evidence_cutoff": "2026-07-31T23:59:59Z",
+  "source_repository": {
+    "path": "/home/eranti/Desktop/meta_innovation_harness",
+    "remote": "https://github.com/dlmastery/meta_innovation_harness.git",
+    "base_oid": "4805d773c2b73c632bf986f5359d9dbb75192e8b",
+    "status_at_capture": "clean"
+  },
+  "controller_state_root": "/home/eranti/Desktop/meta_innovation_harness-battle-state/runs/20260801-W6-continual-learning-july2026",
+  "context": {
+    "path": "FULL_CONTEXT.md",
+    "bytes": 913931,
+    "lines": 13419,
+    "sha256": "2e48d603f1e19fdff64e8f200d58ea34f101df6553cb2870c92b7b791f484c68",
+    "text_repository_files_embedded": 47
+  },
+  "workflow": {
+    "selected": "W6 Hybrid Quarterly Review",
+    "reason": "Highest time budget, publishable whitepaper, adversarial board, risk registers, and future roadmap required.",
+    "questions": 6,
+    "human_gate": "User imperative to run the massive project recorded as approval."
+  },
+  "phase1_round2": {
+    "globally_blanked_questions": ["Q4", "Q6"],
+    "leadership_pulse_1": "COMPLETE_FIVE_SEALED_VOTES",
+    "initial_batch": "REJECTED_GLOBAL_BLANK_LEAKAGE",
+    "rejection_record": "audits/ROUND2_ATTEMPT1_BATCH_REJECTION.md",
+    "repaired_isolation": "fresh repositories from source baseline; forbidden pulse pack absent from worktrees and reachable history",
+    "repaired_processes": {
+      "claude": "proc_39f8eff1001b",
+      "codex": "proc_f8be3f4bde68",
+      "grok": "proc_ca124598733e",
+      "opencode": "proc_640e28ccac8f",
+      "antigravity": "proc_f3a723c60dfb"
+    },
+    "repaired_batch_result": "COMPLETE_FIVE_STRUCTURALLY_ACCEPTED",
+    "source_identity_corrections": [
+      "OpenCode arXiv 1907.05028 replaced by verified 1907.05012",
+      "OpenCode DOI 10.1109/TPAMI.2021.3052446 replaced by Crossref-verified 10.1109/TPAMI.2021.3057446"
+    ],
+    "acceptance_record": "audits/ROUND2_ACCEPTANCE_SUMMARY.md"
+  },
+  "agents": {
+    "claude": {
+      "binary": "/home/eranti/.local/bin/claude",
+      "version": "2.1.220",
+      "auth": "Claude Max account verified; identifiers omitted",
+      "model": "claude-opus-5 via alias opus",
+      "effort": "max",
+      "isolated_repo": "isolated/claude/repo",
+      "smoke_attempt_1": {"process": "proc_6065a5a57b84", "exit_code": 1, "classification": "EXECUTION_FAILURE:max_turns"},
+      "smoke_attempt_2": {"process": "proc_a5c3440afb86", "exit_code": 0, "classification": "SUBSTANTIVE", "primary_url": "https://arxiv.org/abs/2607.07847"},
+      "phase1_attempt_1": {"process": "proc_0243b6739768", "exit_code": 0, "classification": "ACCEPT_WITH_CLAIM_LEVEL_DOWNGRADES", "context_commit": "0a3d28e9393c69caa87fcf56ca71d5dd53f69253", "artifact": "final/claude.phase1.attempt1.md", "words": 15883, "source_ids": 67}
+    },
+    "codex": {
+      "binary": "/home/eranti/.local/bin/codex",
+      "version": "0.146.0",
+      "auth": "ChatGPT login verified",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "isolated_repo": "isolated/codex/repo",
+      "smoke_attempt_1": {"process": "proc_f2f6c3bcdc36", "exit_code": 2, "classification": "EXECUTION_FAILURE:flag_order"},
+      "smoke_attempt_2": {"process": "proc_d51ea690546f", "exit_code": 0, "classification": "EXECUTION_FAILURE:workspace_sandbox"},
+      "smoke_attempt_3": {"process": "proc_3c91e6e954fe", "exit_code": 0, "classification": "SUBSTANTIVE", "primary_url": "https://research.adobe.com/publication/can-large-language-models-keep-up-benchmarking-online-adaptation-to-continual-knowledge-streams/"},
+      "phase1_attempt_1": {"process": "proc_410c07dee227", "exit_code": 0, "classification": "ACCEPT_WITH_MINOR_DOWNGRADES", "context_commit": "7fc9e25ec298246e965f0680fb7d5948aeabd547", "artifact": "final/codex.phase1.attempt1.md", "words": 10368, "source_ids": 50}
+    },
+    "grok": {
+      "binary": "/home/eranti/.local/bin/grok",
+      "version": "0.2.114",
+      "auth": "CLI reported no interactive auth but provider-backed smoke completed",
+      "model": "grok-4.5-build",
+      "effort": "high",
+      "isolated_repo": "isolated/grok/repo",
+      "smoke_attempt_1": {"process": "proc_2e82dbb92942", "exit_code": 0, "classification": "SUBSTANTIVE", "primary_url": "https://arxiv.org/abs/2607.07847"},
+      "phase1_attempt_1": {"process": "proc_e8a8b9e0869c", "exit_code": 0, "classification": "PLACEHOLDER_CANCELLED", "context_commit": "0a3d28e9393c69caa87fcf56ca71d5dd53f69253"},
+      "phase1_attempt_2": {"process": "proc_2d8dfd5be088", "exit_code": 0, "classification": "ACCEPT_WITH_MATERIAL_DOWNGRADES_AND_LOCATOR_REPAIR", "artifact": "final/grok.phase1.attempt2.md", "words": 9082, "source_ids": 42}
+    },
+    "opencode": {
+      "binary": "/home/eranti/.local/bin/opencode",
+      "version": "1.18.9",
+      "auth": "No private credentials; built-in provider model completed smoke",
+      "model": "opencode/big-pickle",
+      "effort": "max variant",
+      "isolated_repo": "isolated/opencode/repo",
+      "smoke_attempt_1": {"process": "proc_0e1ad52822d1", "exit_code": 0, "classification": "SUBSTANTIVE", "primary_url": "https://aclanthology.org/2026.acl-long.247/"},
+      "phase1_attempt_1": {"process": "proc_8fc6ded76592", "classification": "EXECUTION_FAILURE_ZERO_TOKENS_HUNG_AND_KILLED", "context_commit": "0a3d28e9393c69caa87fcf56ca71d5dd53f69253"},
+      "phase1_attempt_2": {"process": "proc_a9f24ab8ed0c", "exit_code": 0, "classification": "ACCEPT_WITH_MATERIAL_CLAIM_LEVEL_DOWNGRADES", "context_commit": "0a3d28e9393c69caa87fcf56ca71d5dd53f69253", "artifact": "final/opencode.phase1.attempt2.md", "words": 11554, "source_ids": 63}
+    },
+    "antigravity": {
+      "binary": "/home/eranti/.local/bin/agy",
+      "version": "1.1.8",
+      "auth": "model list verified",
+      "model": "gemini-3.1-pro-high",
+      "effort": "high",
+      "isolated_repo": "isolated/antigravity/repo",
+      "smoke_attempt_1": {"process": "proc_232817cffb1c", "exit_code": 0, "classification": "EXECUTION_FAILURE:permission_auto_denied"},
+      "smoke_attempt_2": {"process": "proc_a7a6f9ae59d6", "exit_code": 0, "classification": "SUBSTANTIVE", "primary_url": "https://arxiv.org/abs/2607.07847"},
+      "phase1_attempt_1": {"process": "proc_52a752d4aee5", "exit_code": 0, "classification": "REJECTED_SOURCE_IDENTITY_FAILURE", "context_commit": "0a3d28e9393c69caa87fcf56ca71d5dd53f69253", "artifact": "final/antigravity.phase1.attempt1.md"},
+      "phase1_attempt_2": {"process": "proc_1610918d6156", "exit_code": 0, "classification": "DOWNGRADE_REJECT_AS_QUANTITATIVELY_RELIABLE_WITHOUT_CORRECTION", "context_commit": "2f66b3c79a57d322fee824879a48da4e28350c2a", "artifact": "final/antigravity.phase1.attempt2.md", "words": 8276, "source_ids": 32}
+    }
+  },
+  "mutation_policy": "Source checkout read-only; one isolated committed context clone per CLI; controller setup commits are distinct from reviewer writes.",
+  "leadership_pulse_2": {
+    "status": "COMPLETE_FIVE_VOTES",
+    "confidence": {"claude": 7, "codex": 8, "grok": 7, "opencode": 7, "antigravity": 7},
+    "artifact": "synthesis/round2-leadership-pulses.md"
+  },
+  "round3": {
+    "isolation": "fresh per-contender clones from baseline; Q1/Q2 current-bests and raw Round-2 responses absent from worktrees and reachable history",
+    "status": "COMPLETE_FIVE_CONTENDERS",
+    "accepted_or_usable": ["claude attempt2", "codex attempt1", "grok attempt1", "opencode accepted", "antigravity attempt2"],
+    "opencode_lineage": "attempt1 killed after 25 minutes with zero-byte output; attempt2 substantive; accepted derivative contains table-only canonical-ledger normalization followed by a separately audited claim-level correction pass; raw output unchanged",
+    "acceptance_artifact": "audits/round3-acceptance-summary.md",
+    "soft_waiver_policy": "hard 4500-word maximum and semantic completeness are binding; 3500-4200 and per-question targets may receive documented non-substantive formatting waivers"
+  },
+  "leadership_pulse_3": {
+    "status": "COMPLETE_FIVE_VALIDATED_VOTES",
+    "confidence": {"claude": 6, "codex": 7, "grok": 7, "opencode": 6, "antigravity": 6},
+    "recommendation": "CONDITIONAL_GO",
+    "artifact": "synthesis/round3-leadership-pulses.md"
+  },
+  "phase2_boards": {
+    "status": "COMPLETE_FIVE_VALIDATED_REPORTS",
+    "accepted": ["claude attempt3", "codex accepted", "grok", "opencode attempt3", "antigravity accepted"],
+    "exact_risks_per_report": 18,
+    "exact_risks_per_question": 3,
+    "acceptance_artifact": "audits/phase2-board-acceptance-summary.md",
+    "controller_adjudication": "publication/continual-learning-llms-july-2026/final-board-adjudication.md",
+    "required_edits": "INTEGRATED"
+  },
+  "publication": {
+    "path": "publication/continual-learning-llms-july-2026",
+    "status": "PASS",
+    "canonical_evidence_records": 80,
+    "link_audit": {"unique_urls": 80, "failed": 0, "restricted": 1},
+    "url_ledger_identity": {"publication_unique_urls": 80, "not_exactly_canonical": 0, "canonical_unused": 0},
+    "secret_scan": {"files": 25, "finding_count": 0},
+    "structure": {"work_packages": 12, "controller_risks": 18, "method_rows": 14},
+    "executive_whitepaper_audit": "PASS",
+    "method_matrix_audit": "PASS_AFTER_EIGHT_BLOCKER_GROUPS_CORRECTED",
+    "post_adjudication_audit": "PASS_AFTER_THREE_STALE_STATUS_REPLACEMENTS",
+    "board_raw_provenance": "PASS_SIX_OF_SIX_BYTE_IDENTICAL"
+  },
+  "next_gate": "Generate checksums and completion receipt, integrate into dlmastery/meta_innovation_harness, push, and verify the exact remote revision."
+}

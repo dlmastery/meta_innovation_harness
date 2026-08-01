@@ -23,6 +23,7 @@
 - 🎞️ **Pitch deck — 100-slide auto-slideshow (rendered):** <https://dlmastery.github.io/meta_innovation_harness/slideshow.html>
 - ⬇️ **Download the deck (.pptx):** [`deck/Meta-Innovation-Harness-Pitch.pptx`](deck/Meta-Innovation-Harness-Pitch.pptx) · [slide-by-slide outline](deck/OUTLINE.md)
 - 📑 **Docs hub:** [`documentation/README.md`](documentation/README.md) · 🧩 **Skills:** [`skills/README.md`](skills/README.md) · 🔬 **Live Q1 run:** [`examples/question1/`](examples/question1/)
+- 🧠 **Continual learning in LLMs — July 2026 quarterly review:** [`research/continual-learning-llms-july-2026/`](research/continual-learning-llms-july-2026/)
 
 > ℹ️ The slideshow must be opened via the **github.io** link above so it *renders*. The
 > `github.com/.../blob/main/docs/slideshow.html` URL only shows raw HTML source, not the running deck.

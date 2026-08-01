@@ -1,0 +1,647 @@
+{
+  "run_id": "20260801-W6-continual-learning-july2026",
+  "evidence_cutoff": "2026-07-31T23:59:59Z",
+  "record_count": 80,
+  "records": [
+    {
+      "id": "E001",
+      "title": "“TiC-LM: A Web-Scale Benchmark for Time-Continual LLM Pretraining”",
+      "url": "https://aclanthology.org/2025.acl-long.1551/",
+      "status": "2025-07; ACL 2025 oral; primary",
+      "supported_claim": "114 web snapshots; replay and schedule; 2.6× compute result",
+      "caveat": "Web pretraining, 1B/3B; high"
+    },
+    {
+      "id": "E002",
+      "title": "“Spurious Forgetting in Continual Learning of Language Models”",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/a774503daed55eb53c634847ae071ec7-Paper-Conference.pdf",
+      "status": "2025-04; ICLR; primary, negative",
+      "supported_claim": "Performance loss can remain rapidly recoverable",
+      "caveat": "Main diagnostic is synthetic; high"
+    },
+    {
+      "id": "E003",
+      "title": "“When Does Continual Learning Require Learning?”",
+      "url": "https://arxiv.org/abs/2607.07847",
+      "status": "2026-07-08; preprint; primary",
+      "supported_claim": "Mechanism-agnostic protocol and eight methods",
+      "caveat": "Recent preprint; medium-high"
+    },
+    {
+      "id": "E004",
+      "title": "“Denser ≠ Better”",
+      "url": "https://arxiv.org/abs/2607.01763",
+      "status": "2026-07-02; preprint; primary, negative",
+      "supported_claim": "SDPO drift and OOD collapse; GRPO contrast",
+      "caveat": "Limited models/setups; medium"
+    },
+    {
+      "id": "E005",
+      "title": "“FOREVER”",
+      "url": "https://aclanthology.org/2026.acl-long.1144/",
+      "status": "2026-07; ACL; primary",
+      "supported_claim": "Adaptive consolidation from update magnitude",
+      "caveat": "Small-to-mid backbones; high"
+    },
+    {
+      "id": "E006",
+      "title": "“ForgetBench”",
+      "url": "https://arxiv.org/abs/2607.26455",
+      "status": "2026-07-29; preprint; primary, negative",
+      "supported_claim": "Sequential-edit retention/generalization tradeoff",
+      "caveat": "Code promised, not released; medium-high"
+    },
+    {
+      "id": "E007",
+      "title": "“Continual Learning Bench”",
+      "url": "https://arxiv.org/abs/2606.05661",
+      "status": "2026-06-04; preprint/benchmark; primary, negative",
+      "supported_claim": "Stateful domains; memory not reliably above ICL",
+      "caveat": "Young benchmark; medium-high"
+    },
+    {
+      "id": "E008",
+      "title": "“Can Large Language Models Keep Up?”",
+      "url": "https://arxiv.org/abs/2603.07392",
+      "status": "2026-03-08; preprint; primary, negative",
+      "supported_claim": "OAKS continuous facts; agent memory below naive RAG",
+      "caveat": "Inference-time adaptation; medium"
+    },
+    {
+      "id": "E009",
+      "title": "“Useful Memories Become Faulty”",
+      "url": "https://arxiv.org/abs/2605.12978",
+      "status": "2026-05-13; preprint; primary, negative",
+      "supported_claim": "Forced consolidation can harm prior solutions",
+      "caveat": "Agent task distribution; medium-high"
+    },
+    {
+      "id": "E010",
+      "title": "“When Continual Learning Moves to Memory”",
+      "url": "https://arxiv.org/abs/2604.27003",
+      "status": "2026-04-29; work in progress; primary, negative",
+      "supported_claim": "External memory relocates interference",
+      "caveat": "Small environments; medium"
+    },
+    {
+      "id": "E011",
+      "title": "“SelfMem”",
+      "url": "https://arxiv.org/abs/2607.03726",
+      "status": "2026-07-04; preprint; primary",
+      "supported_claim": "Automated memory-strategy optimization and BEAM costs",
+      "caveat": "Benchmark/provider dependent; medium"
+    },
+    {
+      "id": "E012",
+      "title": "“LifelongAgentBench”",
+      "url": "https://arxiv.org/abs/2505.11942",
+      "status": "2025-05-17; preprint; primary",
+      "supported_claim": "Agent experience reuse; irrelevant replay",
+      "caveat": "Limited environments; medium"
+    },
+    {
+      "id": "E013",
+      "title": "“MemoryAgentBench”",
+      "url": "https://arxiv.org/abs/2507.05257",
+      "status": "2025-07-07; preprint; primary",
+      "supported_claim": "Retrieval, test-time learning, long range, forgetting",
+      "caveat": "Benchmark suite, not deployment; medium-high"
+    },
+    {
+      "id": "E014",
+      "title": "“AgentPoison”",
+      "url": "https://arxiv.org/abs/2407.12784",
+      "status": "2024-07-17; primary, negative",
+      "supported_claim": "Memory/RAG poisoning with very small poison fraction",
+      "caveat": "Attack assumptions vary; high"
+    },
+    {
+      "id": "E015",
+      "title": "“PoisonedRAG”",
+      "url": "https://arxiv.org/abs/2402.07867",
+      "status": "2024-02-12; primary, negative",
+      "supported_claim": "Retrieval poisoning at scale",
+      "caveat": "Targeted threat model; high"
+    },
+    {
+      "id": "E016",
+      "title": "“On Large Language Model Continual Unlearning”",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/fc28053a08f59fccb48b11f2e31e81c7-Paper-Conference.pdf",
+      "status": "2025-04; ICLR; primary",
+      "supported_claim": "Orthogonal LoRA and OOD routing for unlearning",
+      "caveat": "Behavioral removal only; high"
+    },
+    {
+      "id": "E017",
+      "title": "“Machine Unlearning Fails to Remove Data Poisoning Attacks”",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/7e810b2c75d69be186cadd2fe3febeab-Abstract-Conference.html",
+      "status": "2025-04; ICLR; primary, negative",
+      "supported_claim": "Poison effects can survive unlearning",
+      "caveat": "Does not cover every unlearning design; high"
+    },
+    {
+      "id": "E018",
+      "title": "“ICU-Bench”",
+      "url": "https://arxiv.org/abs/2605.05938",
+      "status": "2026-05-07; preprint; primary, negative",
+      "supported_claim": "Long continual-unlearning utility collapse/rebound",
+      "caveat": "Synthetic profiles; medium-high"
+    },
+    {
+      "id": "E019",
+      "title": "“SafeMERGE”",
+      "url": "https://aclanthology.org/2026.findings-acl.1761/",
+      "status": "2026-07; Findings ACL; primary",
+      "supported_claim": "Layer-selective safe baseline merging",
+      "caveat": "Four models/tasks; high"
+    },
+    {
+      "id": "E020",
+      "title": "“Continual Safety Alignment via Gradient-Based Sample Selection”",
+      "url": "https://aclanthology.org/2026.findings-acl.942/",
+      "status": "2026-07; Findings ACL; primary",
+      "supported_claim": "High-gradient filtering for safety retention",
+      "caveat": "Potential plasticity tradeoff; high"
+    },
+    {
+      "id": "E021",
+      "title": "TRACE",
+      "url": "https://arxiv.org/abs/2310.06762",
+      "status": "2023-10-10; primary",
+      "supported_claim": "Eight-domain benchmark; severe forgetting",
+      "caveat": "Older models, short sequence; high"
+    },
+    {
+      "id": "E022",
+      "title": "ConPET",
+      "url": "https://arxiv.org/abs/2309.14763",
+      "status": "2023-09-26; primary",
+      "supported_claim": "PET plus dynamic replay and routing",
+      "caveat": "Adapter growth; high"
+    },
+    {
+      "id": "E023",
+      "title": "O-LoRA",
+      "url": "https://aclanthology.org/2023.findings-emnlp.715/",
+      "status": "2023-12; Findings EMNLP; primary",
+      "supported_claim": "Orthogonal low-rank subspaces",
+      "caveat": "Limited sequence/capacity analysis; high"
+    },
+    {
+      "id": "E024",
+      "title": "“Exploiting Presentative Feature Distributions…”",
+      "url": "https://proceedings.mlr.press/v267/cheng25j.html",
+      "status": "2025-07; ICML; primary",
+      "supported_claim": "Task-free feature routing to LoRA blocks",
+      "caveat": "Blocks still grow; high"
+    },
+    {
+      "id": "E025",
+      "title": "PaRSP",
+      "url": "https://aclanthology.org/2026.acl-long.1244/",
+      "status": "2026-07; ACL; primary",
+      "supported_claim": "Sparse task regions and reserved capacity",
+      "caveat": "Conventional benchmarks; high"
+    },
+    {
+      "id": "E026",
+      "title": "ASO-LoRA",
+      "url": "https://aclanthology.org/2026.acl-long.842/",
+      "status": "2026-07; ACL; primary",
+      "supported_claim": "Attribution and soft orthogonality",
+      "caveat": "T5/Llama-2 scale; high"
+    },
+    {
+      "id": "E027",
+      "title": "N-LoRA",
+      "url": "https://aclanthology.org/2025.coling-main.286/",
+      "status": "2025-01; COLING; primary",
+      "supported_claim": "Orthogonality and collision reduction",
+      "caveat": "Headline metrics setup-specific; high"
+    },
+    {
+      "id": "E028",
+      "title": "Progressive LoRA",
+      "url": "https://aclanthology.org/2025.findings-acl.143/",
+      "status": "2025-07; Findings ACL; primary",
+      "supported_claim": "One new block per task",
+      "caveat": "Linear capacity growth; high"
+    },
+    {
+      "id": "E029",
+      "title": "TamEdit",
+      "url": "https://aclanthology.org/2026.acl-long.979/",
+      "status": "2026-07; ACL; primary",
+      "supported_claim": "Trajectory-aware long-sequence editing",
+      "caveat": "Factual QA and finite edit sequence; high"
+    },
+    {
+      "id": "E030",
+      "title": "ROME",
+      "url": "https://arxiv.org/abs/2202.05262",
+      "status": "2022-02-10; primary",
+      "supported_claim": "Causal tracing and rank-one edits",
+      "caveat": "Local edits; high"
+    },
+    {
+      "id": "E031",
+      "title": "MEMIT",
+      "url": "https://arxiv.org/abs/2210.07229",
+      "status": "2022-10-13; primary",
+      "supported_claim": "Thousands of factual edits",
+      "caveat": "Propagation/specificity concerns; high"
+    },
+    {
+      "id": "E032",
+      "title": "MEND",
+      "url": "https://arxiv.org/abs/2110.11309",
+      "status": "2021-10-21; primary",
+      "supported_claim": "Learned low-rank gradient transformation",
+      "caveat": "Meta-training dependency; high"
+    },
+    {
+      "id": "E033",
+      "title": "MQuAKE",
+      "url": "https://arxiv.org/abs/2305.14795",
+      "status": "2023-05-24; primary, negative",
+      "supported_claim": "Multi-hop editing failures",
+      "caveat": "Knowledge-QA focus; high"
+    },
+    {
+      "id": "E034",
+      "title": "“RAG or Learning?”",
+      "url": "https://aclanthology.org/2026.findings-acl.546/",
+      "status": "2026-07; Findings ACL; primary",
+      "supported_claim": "Chronos temporal event graph outperforms several editors",
+      "caveat": "Needs trusted temporal KB; high"
+    },
+    {
+      "id": "E035",
+      "title": "“Overcoming Catastrophic Forgetting…”",
+      "url": "https://doi.org/10.1073/pnas.1611835114",
+      "status": "2017-03; PNAS; primary",
+      "supported_claim": "EWC and parameter-importance regularization",
+      "caveat": "Diagonal/local approximation; high"
+    },
+    {
+      "id": "E036",
+      "title": "“Gradient Episodic Memory”",
+      "url": "https://papers.nips.cc/paper/7225-gradient-episodic-memory-for-continual-learning",
+      "status": "2017-12; NeurIPS; primary",
+      "supported_claim": "Episodic constraints; BWT/FWT",
+      "caveat": "Pre-LLM benchmarks; high"
+    },
+    {
+      "id": "E037",
+      "title": "“Progressive Neural Networks”",
+      "url": "https://arxiv.org/abs/1606.04671",
+      "status": "2016-06-15; primary",
+      "supported_claim": "Frozen columns and lateral transfer",
+      "caveat": "Unbounded growth; high"
+    },
+    {
+      "id": "E038",
+      "title": "“Complementary Learning Systems”",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7624455/",
+      "status": "1995; Psychological Review; primary",
+      "supported_claim": "Fast episodic/slow consolidation analogy",
+      "caveat": "Neuroscience theory, not LLM algorithm; high"
+    },
+    {
+      "id": "E039",
+      "title": "“Retrieval-Augmented Generation”",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "status": "2020-05-22; primary",
+      "supported_claim": "Parametric plus non-parametric memory",
+      "caveat": "Static Wikipedia setup; high"
+    },
+    {
+      "id": "E040",
+      "title": "RETRO",
+      "url": "https://arxiv.org/abs/2112.04426",
+      "status": "2021-12-08; primary",
+      "supported_claim": "Retrieval-enhanced pretraining at scale",
+      "caveat": "Large curated retrieval DB; high"
+    },
+    {
+      "id": "E041",
+      "title": "“Lost in the Middle”",
+      "url": "https://aclanthology.org/2024.tacl-1.9/",
+      "status": "2024; TACL; primary, negative",
+      "supported_claim": "Positional degradation in long context",
+      "caveat": "Model/context architectures evolve; high"
+    },
+    {
+      "id": "E042",
+      "title": "LiveBench",
+      "url": "https://arxiv.org/abs/2406.19314",
+      "status": "2024-06-27; primary",
+      "supported_claim": "Rolling contamination-resistant evaluation",
+      "caveat": "Cannot prevent all downstream ingestion; high"
+    },
+    {
+      "id": "E043",
+      "title": "AI RMF Generative AI Profile, NIST.AI.600-1",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "status": "2024-07-26; official guidance; primary",
+      "supported_claim": "Provenance, testing, incidents",
+      "caveat": "Voluntary risk framework; high"
+    },
+    {
+      "id": "E044",
+      "title": "“General-purpose AI obligations under the AI Act”",
+      "url": "https://digital-strategy.ec.europa.eu/en/factpages/general-purpose-ai-obligations-under-ai-act",
+      "status": "Obligations applicable from 2025-08-02; official guidance; primary",
+      "supported_claim": "Documentation, copyright, training summary, systemic risk",
+      "caveat": "Legal application is context-specific; high"
+    },
+    {
+      "id": "E045",
+      "title": "GDPR Article 17",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_17/oj/eng",
+      "status": "Official consolidated law; primary",
+      "supported_claim": "Erasure grounds and obligations",
+      "caveat": "Exceptions and roles require legal analysis; high"
+    },
+    {
+      "id": "E046",
+      "title": "Technical Specification 2.2",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.2/index.html",
+      "status": "2025; official technical specification; primary",
+      "supported_claim": "Provenance assertions and bindings",
+      "caveat": "Provenance does not prove truth; high"
+    },
+    {
+      "id": "E047",
+      "title": "“Continual Learning Using Only Large Language Model Prompting”",
+      "url": "https://aclanthology.org/2025.coling-main.402/",
+      "status": "2025-01; COLING; primary",
+      "supported_claim": "Persistent prompt summaries can support class-incremental learning",
+      "caveat": "Small classification regime; high"
+    },
+    {
+      "id": "E048",
+      "title": "“Citation-Aware Continual Pre-Training for Biomedical Language Models”",
+      "url": "https://aclanthology.org/2026.bionlp-1.32.pdf",
+      "status": "2026-07; BioNLP workshop; primary",
+      "supported_claim": "Citation-linked continual pretraining gives modest gains",
+      "caveat": "3B–4B models, possible topical confound; high"
+    },
+    {
+      "id": "E049",
+      "title": "“Two-Phase Continual Instruction Fine-Tuning for Multilingual Adaptation”",
+      "url": "https://aclanthology.org/2026.findings-acl.1595/",
+      "status": "2026-07; Findings ACL; primary",
+      "supported_claim": "Aligned stages can transfer; misaligned stages sharply degrade",
+      "caveat": "Only two phases; high"
+    },
+    {
+      "id": "E050",
+      "title": "MedCL-Bench",
+      "url": "https://arxiv.org/abs/2603.16738",
+      "status": "2026-03-17; preprint; primary",
+      "supported_claim": "Stability-efficiency tradeoffs across biomedical streams",
+      "caveat": "No verified public code; medium"
+    },
+    {
+      "id": "E051",
+      "title": "Can a Language Model Learn Facts Continually in Its Weights?",
+      "url": "https://arxiv.org/abs/2607.11020",
+      "status": "2026-07-13; preprint; primary",
+      "supported_claim": "Sequential invented-fact writes showed 1% bare-statement retention versus 46% with diverse restatements after 20 later writes; intrusion and prompt-recovery diagnostics distinguish access from erasure.",
+      "caveat": "Single-author/single-family preprint; invented facts and tested Qwen3 procedures; no general base-rate claim.; confidence: medium-high"
+    },
+    {
+      "id": "E052",
+      "title": "RL Forgets! Towards Continual Policy Optimization",
+      "url": "https://arxiv.org/abs/2607.04364",
+      "status": "2026-07-05; preprint; primary",
+      "supported_claim": "CPO reports 13.7% less forgetting and 7.0% improved prior capability in the tested Qwen3-VL-8B MRCL setting.",
+      "caveat": "Fresh preprint; one model/task protocol; not evidence for all RL post-training.; confidence: medium-high"
+    },
+    {
+      "id": "E053",
+      "title": "Beyond Perplexity: A Behavioral Evaluation Framework for Deployment-Memory Claims in LLM Test-Time Training",
+      "url": "https://arxiv.org/abs/2607.00368",
+      "status": "2026-07-01; preprint; primary",
+      "supported_claim": "Lower training loss can coexist with exactly zero free-form recall in controlled nonce-fact test-time training.",
+      "caveat": "Controlled synthetic diagnostic; not a population estimate for test-time learning.; confidence: medium-high"
+    },
+    {
+      "id": "E054",
+      "title": "Hidden Forgetting in Continual Multimodal Learning: When Accuracy Survives but Grounding Fails",
+      "url": "https://arxiv.org/abs/2607.02020",
+      "status": "2026-07-02; preprint; primary",
+      "supported_claim": "Answer accuracy can remain while grounding/evidence use changes during continual multimodal adaptation.",
+      "caveat": "Multimodal benchmark scope; fresh preprint and not direct proof of hidden weight erasure.; confidence: medium-high"
+    },
+    {
+      "id": "E055",
+      "title": "MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair",
+      "url": "https://arxiv.org/abs/2607.27080",
+      "status": "2026-07-29; preprint; primary",
+      "supported_claim": "MemSecBench reports a 310-scenario, 24-configuration matrix and 84.2%, 50.3%, and 56.1% headline security outcomes.",
+      "caveat": "Fresh preprint; non-adaptive attacks and the tested harness/backend/model matrix only.; confidence: medium-high"
+    },
+    {
+      "id": "E056",
+      "title": "ChronoMem: Version Control and Semantic Rollback for Large Language Model Agent Memory",
+      "url": "https://arxiv.org/abs/2607.27773",
+      "status": "2026-07-30; preprint; primary",
+      "supported_claim": "ChronoMem implements semantic global rollback and post-exposure recovery with ADK integration.",
+      "caveat": "\"First\" is author-asserted; implementation evidence does not prove exhaustive deletion closure.; confidence: medium-high"
+    },
+    {
+      "id": "E057",
+      "title": "MemDelta: Controlled Baselines and Hidden Confounds in Agent Memory Evaluation",
+      "url": "https://arxiv.org/abs/2606.29914",
+      "status": "2026-06-29; preprint; primary",
+      "supported_claim": "MemDelta demonstrates rank reversals and confounds across controlled memory comparisons, including the audited numerical bundle.",
+      "caveat": "Single-author preprint; LongMemEval-S, n=500 overall; results are benchmark-specific.; confidence: medium-high"
+    },
+    {
+      "id": "E058",
+      "title": "Is Our Benchmark Enough? An Analysis of Continual Learning for MLLMs",
+      "url": "https://arxiv.org/abs/2606.20961",
+      "status": "2026-06-18; ICML 2026 workshop paper; primary",
+      "supported_claim": "Shows separability, fixed-order, and routing pathologies in a multimodal continual-learning benchmark.",
+      "caveat": "ICML 2026 workshop paper, not main-track; critique of one benchmark.; confidence: medium-high"
+    },
+    {
+      "id": "E059",
+      "title": "Can Scale Save Us From Plasticity Loss in Large Language Models?",
+      "url": "https://arxiv.org/abs/2606.24752",
+      "status": "2026-06-23; preprint; primary",
+      "supported_claim": "Plasticity loss appears in stationary and continual multilingual GPT-style training, with sublinear onset scaling.",
+      "caveat": "Tested only 5M–314M non-embedding parameters and a narrow probe; frontier extrapolation unverified.; confidence: medium-high"
+    },
+    {
+      "id": "E060",
+      "title": "Revisiting Replay and Gradient Alignment for Continual Pre-Training of Large Language Models",
+      "url": "https://arxiv.org/abs/2508.01908",
+      "status": "2025-08-03; preprint; primary",
+      "supported_claim": "Five-language Llama CPT; 100B tokens per language; replay-rate and gradient-alignment scaling.",
+      "caveat": "No replay-buffer-size bound; preprint; confidence: medium-high."
+    },
+    {
+      "id": "E061",
+      "title": "Full-Parameter Continual Pretraining of Gemma 2: Insights into Fluency and Domain Knowledge",
+      "url": "https://arxiv.org/abs/2505.05946",
+      "status": "2025-05-09; technical report/preprint; primary",
+      "supported_claim": "Narrow LLM EWC result; English mitigation 7/7 and Lithuanian improvement 5/7.",
+      "caveat": "One language pair and Fisher-estimation protocol; confidence: medium."
+    },
+    {
+      "id": "E062",
+      "title": "Continual Calibration: Coverage Can Collapse Before Accuracy in Lifelong LLM Fine-Tuning",
+      "url": "https://arxiv.org/abs/2604.23987",
+      "status": "2026-04-27; preprint; primary, negative",
+      "supported_claim": "3.4× coverage/accuracy loss ratio; 18%/89% drift decomposition; calibration replay.",
+      "caveat": "Classification/MCQ-heavy; venue status unverified; confidence: medium-high."
+    },
+    {
+      "id": "E063",
+      "title": "Learning on the Job: Continual Learning from Deployment Feedback for Frozen-Weights Agents",
+      "url": "https://arxiv.org/abs/2607.22157",
+      "status": "2026-07-24; preprint; primary",
+      "supported_claim": "Feedback-distilled external memory; 1.6×/2.6× static-RAG result; cross-model memory transfer.",
+      "caveat": "Single author and domain; four repeated trials; confidence: medium-high."
+    },
+    {
+      "id": "E064",
+      "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually",
+      "url": "https://arxiv.org/abs/2605.12484",
+      "status": "2026-05-12; preprint; primary",
+      "supported_claim": "Fast textual prompt population plus slow RL; 1.4–3× sample efficiency; up to 70% lower KL drift.",
+      "caveat": "Qwen3-8B; three-stage test; external `gpt-5.2` reflection LM; confidence: medium."
+    },
+    {
+      "id": "E065",
+      "title": "Hyperagents",
+      "url": "https://arxiv.org/abs/2603.19461",
+      "status": "2026-03-19; preprint plus official code; primary",
+      "supported_claim": "Editable task/meta-agent programs; transferable `imp@50=0.630`.",
+      "caveat": "Agent search, not parametric CL; sandboxed and human-supervised; confidence: medium."
+    },
+    {
+      "id": "E066",
+      "title": "Learning without training: The implicit dynamics of in-context learning",
+      "url": "https://arxiv.org/abs/2507.16003",
+      "status": "2025-07-21; preprint; primary/theory",
+      "supported_claim": "Contextual forward pass as an implicit minimal low-rank MLP update.",
+      "caveat": "Computational/input-conditioned equivalence, not persistent learning; confidence: medium-high."
+    },
+    {
+      "id": "E067",
+      "title": "Knowledge Base Poisoning Attacks and Defense for Policy-Aware LLM-RAG Framework",
+      "url": "https://arxiv.org/abs/2607.04379",
+      "status": "2026-07-05; preprint; primary, negative",
+      "supported_claim": "One-rule/1.6% poisoning yields 85% context corruption; scoped defense.",
+      "caveat": "One 60-rule IoBT KB, 20 prompts, and one scenario; confidence: medium."
+    },
+    {
+      "id": "E068",
+      "title": "A Theoretical Perspective: How to Prevent Model Collapse in Self-consuming Training Loops",
+      "url": "https://arxiv.org/abs/2502.18865",
+      "status": "2025; ICLR paper; primary/theory",
+      "supported_claim": "Recursive-stability and constant-real-data-proportion convergence conditions.",
+      "caveat": "Conditional theorem, not a universal replay percentage; confidence: high for theorem, low for LLM-scale transfer."
+    },
+    {
+      "id": "E069",
+      "title": "The Forgetting-Retention Dilemma: Certified Unlearning Theory in Continual Learning",
+      "url": "https://arxiv.org/abs/2606.29832",
+      "status": "2026-06-29; preprint/theory; primary",
+      "supported_claim": "Post-unlearning excess-risk decomposition and CL/unlearning trade-off.",
+      "caveat": "Experiments use CIFAR/MNIST with CNN/ResNet models, not LLMs; confidence: medium."
+    },
+    {
+      "id": "E070",
+      "title": "Orthogonal Subspace Learning for Language Model Continual Learning",
+      "url": "https://arxiv.org/abs/2310.14152",
+      "status": "2023-10-22; preprint; primary",
+      "supported_claim": "Orthogonal low-rank adaptation reduces interference on evaluated finite continual-learning sequences.",
+      "caveat": "Finite academic streams; not an indefinite or frontier-scale guarantee; confidence: medium."
+    },
+    {
+      "id": "E071",
+      "title": "Efficient Continual Pre-training by Mitigating the Stability Gap",
+      "url": "https://arxiv.org/abs/2406.14833",
+      "status": "2024-06-21; preprint; primary",
+      "supported_claim": "Identifies and mitigates the early stability gap during continual pretraining.",
+      "caveat": "Protocol-specific and not a complete lifelong-learning architecture; confidence: medium."
+    },
+    {
+      "id": "E072",
+      "title": "WikiBigEdit: Understanding the Limits of Lifelong Knowledge Editing in LLMs",
+      "url": "https://arxiv.org/abs/2503.05683",
+      "status": "2025-03-07; preprint; primary, negative",
+      "supported_claim": "Large-scale benchmark evidence that tested editors degrade over long knowledge-edit sequences.",
+      "caveat": "Applies to evaluated editors and models, not every future editing method; confidence: medium-high."
+    },
+    {
+      "id": "E073",
+      "title": "TFGN: Task-Free, Replay-Free Continual Pre-Training Without Catastrophic Forgetting at LLM Scale",
+      "url": "https://arxiv.org/abs/2605.15053",
+      "status": "2026-05-14; technical report/preprint; primary",
+      "supported_claim": "Reports task-free, replay-free continual-pretraining results including near-zero backward transfer in its tested Llama setting.",
+      "caveat": "Unreplicated first-party report with a bounded staged protocol; confidence: low-medium."
+    },
+    {
+      "id": "E074",
+      "title": "Latent-LoRA: Compact Latent-Space Adapters with Gradient-Free Routing for Continual Learning",
+      "url": "https://arxiv.org/abs/2607.23837",
+      "status": "2026-07-26; preprint; primary",
+      "supported_claim": "Proposes compact latent-space adapters and gradient-free routing for continual learning.",
+      "caveat": "Very recent unreplicated preprint; routing and lifecycle costs need independent evaluation; confidence: low-medium."
+    },
+    {
+      "id": "E075",
+      "title": "Three scenarios for continual learning",
+      "url": "https://arxiv.org/abs/1904.07734",
+      "status": "2019-04-15; preprint/workshop; primary taxonomy",
+      "supported_claim": "Distinguishes task-, domain-, and class-incremental evaluation scenarios and task-identity assumptions.",
+      "caveat": "Pre-LLM image settings; transfer is conceptual; confidence: high for identity/taxonomy."
+    },
+    {
+      "id": "E076",
+      "title": "Continual Learning Through Synaptic Intelligence",
+      "url": "http://proceedings.mlr.press/v70/zenke17a.html",
+      "status": "2017; ICML/PMLR; primary",
+      "supported_claim": "Establishes synaptic-intelligence importance regularization as a bounded anti-forgetting family.",
+      "caveat": "Small supervised benchmarks, not LLM evidence; confidence: high for source, low for LLM transfer."
+    },
+    {
+      "id": "E077",
+      "title": "Experience Replay for Continual Learning",
+      "url": "https://arxiv.org/abs/1811.11682",
+      "status": "2018-11-28; NeurIPS-era preprint; primary",
+      "supported_claim": "Supports replay as a strong historical baseline across evaluated RL/classification settings.",
+      "caveat": "Does not establish LLM-scale storage, privacy, or lifecycle feasibility; confidence: high for source, medium-low for transfer."
+    },
+    {
+      "id": "E078",
+      "title": "On Tiny Episodic Memories in Continual Learning",
+      "url": "https://arxiv.org/abs/1902.10486",
+      "status": "2019-02-27; preprint; primary",
+      "supported_claim": "Demonstrates useful small episodic memories in an evaluated image-classification protocol.",
+      "caveat": "Small-memory claims are protocol-specific and do not imply small LLM replay stores; confidence: high for source, low for transfer."
+    },
+    {
+      "id": "E079",
+      "title": "Making AI Forget You: Data Deletion in Machine Learning",
+      "url": "https://arxiv.org/abs/1907.05012",
+      "status": "2019-07-11; NeurIPS-era preprint; primary",
+      "supported_claim": "Shows that deletion cost and guarantees depend on model class and system design.",
+      "caveat": "Linear/statistical model setting; no direct LLM deletion guarantee; confidence: high for source, low-medium for transfer."
+    },
+    {
+      "id": "E080",
+      "title": "A Continual Learning Survey: Defying Forgetting in Classification Tasks",
+      "url": "https://doi.org/10.1109/TPAMI.2021.3057446",
+      "status": "2021; IEEE TPAMI survey; official secondary",
+      "supported_claim": "Supports historical metric conventions and classification-era taxonomy.",
+      "caveat": "Survey, not primary LLM evidence; confidence: high for identity after Crossref correction, medium for conceptual use."
+    }
+  ]
+}
