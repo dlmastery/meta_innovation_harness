@@ -34,9 +34,9 @@ python3 audits/check_links.py publication/continual-learning-llms-july-2026/*.md
 
 ## Publication revisions
 
-- **Artifact baseline commit:** populated after the initial publication commit.
-- **Final receipt/checksum commit:** reported in the repository history and final remote-verification response.
-- **Remote read-back:** populated after GitHub verification.
+- **Artifact baseline commit:** `11338a1ebd220c84cb3de0aa41d4f3a4f5e6a6bc`.
+- **Final immutable publication pointer:** annotated tag `continual-learning-llms-july-2026`, created on the immediate receipt/checksum successor to the artifact baseline.
+- **Exact final commit and remote read-back:** verified from GitHub and reported with the delivered package; the tag is the durable in-repository pointer because a committed file cannot contain its own commit hash without circularity.
 
 ## Residual limitations
 
